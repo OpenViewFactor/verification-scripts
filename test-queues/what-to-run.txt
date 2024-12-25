@@ -1,5 +1,0 @@
-par-plate-tests.xml
-coaxial-discs-tests.xml
-coaxial-cylinders-tests.xml
-per-plate-tests.xml
-concentric-spheres-tests.xml
