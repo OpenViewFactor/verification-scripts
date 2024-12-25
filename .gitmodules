@@ -1,0 +1,3 @@
+[submodule "submodules/pyOpenViewFactor"]
+	path = submodules/pyOpenViewFactor
+	url = https://github.com/OpenViewFactor/pyOpenViewFactor.git
