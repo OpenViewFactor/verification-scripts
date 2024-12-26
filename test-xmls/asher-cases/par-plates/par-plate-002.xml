@@ -15,15 +15,16 @@
     </TARGETS>
 
     <MESHES>
-        <EMITTER>assets\participatory\aligned-parallel-rectangles\bottom-xbar=0.2-ybar=0.2.stl</EMITTER>
-        <RECEIVER>assets\participatory\aligned-parallel-rectangles\top-xbar=0.2-ybar=0.2.stl</RECEIVER>
+        <EMITTER>bottom-xbar=0.2-ybar=0.2.stl</EMITTER>
+        <RECEIVER>top-xbar=0.2-ybar=0.2.stl</RECEIVER>
         <BLOCKER>NONE</BLOCKER>
     </MESHES>
 
     <SETTINGS>
         <SELF-INT>NONE</SELF-INT>
-        <METHOD>DAIMT</METHOD>
+        <METHOD>DAI</METHOD>
         <PRECISION>DOUBLE</PRECISION>
+        <COMPUTE>CPU_N</COMPUTE>
     </SETTINGS>
 
 </DATA>
