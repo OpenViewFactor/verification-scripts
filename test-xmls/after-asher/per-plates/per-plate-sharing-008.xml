@@ -3,7 +3,7 @@
 <DATA>
 
     <TEST-DESCRIPTION>
-        <TEST-CONFIGURATION>Z/X=0.1 Y/X=0.1 perpendicular plates (nonsharing)</TEST-CONFIGURATION>
+        <TEST-CONFIGURATION>Z/X=10 Y/X=10 perpendicular plates (shared edge)</TEST-CONFIGURATION>
         <AUTHOR>Natan Herzog</AUTHOR>
         <DATE-CREATED>07/16/2023</DATE-CREATED>
     </TEST-DESCRIPTION>
@@ -15,16 +15,16 @@
     </TARGETS>
 
     <MESHES>
-        <EMITTER>assets\participatory\perpendicular-rectangles\z-x-0.1-y-x-0.1/horz_327680TB.STL</EMITTER>
-        <RECEIVER>assets\participatory\perpendicular-rectangles\z-x-0.1-y-x-0.1/vert_262144TB.STL</RECEIVER>
+        <EMITTER>horizontal-z-x=10-y-x=10.stl</EMITTER>
+        <RECEIVER>vertical-z-x=10-y-x=10.stl</RECEIVER>
         <BLOCKER>NONE</BLOCKER>
     </MESHES>
 
     <SETTINGS>
         <SELF-INT>NONE</SELF-INT>
-        <METHOD>DAIMT</METHOD>
-        
+        <METHOD>DAI</METHOD>
         <PRECISION>DOUBLE</PRECISION>
+        <COMPUTE>CPU_N</COMPUTE>
     </SETTINGS>
 
 </DATA>

@@ -11,14 +11,12 @@
     <TARGETS>
         <ANALYTIC-RESULT>1.998248957e-1</ANALYTIC-RESULT>
         <EXPECTED-NUMERICAL-RESULT>1.998250489e-1</EXPECTED-NUMERICAL-RESULT>
-        <TOLERANCE>1e-2</TOLERANCE>
+        <TOLERANCE>1e-6</TOLERANCE>
     </TARGETS>
 
     <MESHES>
-        <!-- <EMITTER>assets\participatory\aligned-parallel-rectangles\bottom-xbar=1-ybar=1.stl</EMITTER>
-        <RECEIVER>assets\participatory\aligned-parallel-rectangles\top-xbar=1-ybar=1.stl</RECEIVER> -->
-        <EMITTER>refined_xy_plane_unit_square.stl</EMITTER>
-        <RECEIVER>refined_xy_plane_offset_unit_square.stl</RECEIVER>
+        <EMITTER>bottom-xbar=1-ybar=1.stl</EMITTER>
+        <RECEIVER>top-xbar=1-ybar=1.stl</RECEIVER>
         <BLOCKER>NONE</BLOCKER>
     </MESHES>
 

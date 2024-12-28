@@ -22,9 +22,9 @@
 
     <SETTINGS>
         <SELF-INT>NONE</SELF-INT>
-        <METHOD>DAIMT</METHOD>
-        
+        <METHOD>DAI</METHOD>
         <PRECISION>DOUBLE</PRECISION>
+        <COMPUTE>CPU_N</COMPUTE>
     </SETTINGS>
 
 </DATA>
