@@ -15,16 +15,16 @@
     </TARGETS>
 
     <MESHES>
-        <EMITTER>assets\participatory\coaxial-cylinders\outer-r2perh=2-cent=0,0-numtri=22914.stl</EMITTER>
-        <RECEIVER>assets\participatory\coaxial-cylinders\inner-r1perh=1-cent=0,0-numtri=22914.stl</RECEIVER>
+        <EMITTER>inner-r1-h=1.0.stl</EMITTER>
+        <RECEIVER>outer-r2-h=2.0.stl</RECEIVER>
         <BLOCKER>NONE</BLOCKER>
     </MESHES>
 
     <SETTINGS>
         <SELF-INT>NONE</SELF-INT>
-        <METHOD>DAIMT</METHOD>
-        
+        <METHOD>DAI</METHOD>
         <PRECISION>DOUBLE</PRECISION>
+        <COMPUTE>CPU_N</COMPUTE>
     </SETTINGS>
 
 </DATA>
