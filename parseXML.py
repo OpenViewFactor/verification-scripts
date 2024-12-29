@@ -3,7 +3,9 @@ import xml.etree.ElementTree as ET
 def parseXML(filepath):
   xml_root = ET.parse(filepath).getroot()
 
-  print("< ---------- Test Metadata ---------- >")
+  print("\n<><><><><><><><><><><><><><><><><><><><>")
+  print("|| ---------- Test Metadata --------- ||")
+  print("<><><><><><><><><><><><><><><><><><><><>\n")
 
   information = xml_root.findall('TEST-DESCRIPTION')[0]
   configuration = information.findall('TEST-CONFIGURATION')[0].text
