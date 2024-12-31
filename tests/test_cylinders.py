@@ -9,42 +9,50 @@ meshes_directory = os.path.join(current_file_directory, "../submodules/verificat
 xmls_directory = os.path.join(current_file_directory, "../test-xmls/asher-cases/coaxial-cylinders")
 
 def cylinders001():
-  proc = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-001.xml"), meshes_directory)
-  print(proc.stdout)
-
+  runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-001.xml"), meshes_directory)
+  
 def cylinders002():
-  proc = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-002.xml"), meshes_directory)
-  print(proc.stdout)
-
+  runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-002.xml"), meshes_directory)
+  
 def cylinders003():
-  proc = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-003.xml"), meshes_directory)
-  print(proc.stdout)
-
+  runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-003.xml"), meshes_directory)
+  
 def cylinders004():
-  proc = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-004.xml"), meshes_directory)
-  print(proc.stdout)
-
+  runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-004.xml"), meshes_directory)
+  
 def cylinders005():
-  proc = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-005.xml"), meshes_directory)
-  print(proc.stdout)
-
+  runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-005.xml"), meshes_directory)
+  
 def cylinders006():
-  proc = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-006.xml"), meshes_directory)
-  print(proc.stdout)
-
+  runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-006.xml"), meshes_directory)
+  
 def cylinders007():
-  proc = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-007.xml"), meshes_directory)
-  print(proc.stdout)
-
-
+  runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-007.xml"), meshes_directory)
+  
 def runAllTests():
-  cylinders001()
-  cylinders002()
-  cylinders003()
-  cylinders004()
-  cylinders005()
-  cylinders006()
-  cylinders007()
+  passed_counter = 0
+  if cylinders001():
+    passed_counter+=1
+  if cylinders002():
+    passed_counter+=1
+  if cylinders003():
+    passed_counter+=1
+  if cylinders004():
+    passed_counter+=1
+  if cylinders005():
+    passed_counter+=1
+  if cylinders006():
+    passed_counter+=1
+  if cylinders007():
+    passed_counter+=1
+
+  print("\n<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>")
+  print("|| ------------- CONCENTRIC CYLINDERS RESULTS ------------- ||")
+  print("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>\n")
+
+  print(f"Concentric Cylinders Results:\t {passed_counter} / 7 PASSED")
+
+  return passed_counter
 
 if __name__ == "__main__":
   runAllTests()

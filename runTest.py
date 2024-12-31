@@ -23,4 +23,18 @@ def runTest(xml_filepath, meshes_directory):
     PRECISION = xml_specifications["solver-settings"]["precision"]
   )
 
-  return proc
+  result = float(proc.stdout.split("[RESULT] ")[1].split("[LOG]")[0].split(':')[1])
+
+  print(f"Surface-Surface View Factor:\t {result}")
+
+  analytic_result = xml_specifications["test"]["analytic"]
+  tolerance = xml_specifications["test"]["tolerance"]
+  absolute_error = abs(result - analytic_result)
+  print(f"Absolute Error:\t\t\t {absolute_error:E}")
+  relative_error = absolute_error / analytic_result
+  print(f"Relative Error:\t\t\t {relative_error:E}")
+  passed = relative_error < tolerance
+  test_result = "PASSED" if passed else "FAILED"
+  print(f"Test Result:\t\t\t {test_result}")
+
+  return passed

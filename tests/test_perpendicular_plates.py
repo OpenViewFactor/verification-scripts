@@ -10,71 +10,53 @@ non_sharing_xmls_directory = os.path.join(current_file_directory, "../test-xmls/
 sharing_xmls_directory = os.path.join(current_file_directory, '../test-xmls/after-asher/per-plates')
 
 def perPlates001():
-  proc = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-001.xml"), meshes_directory)
-  print(proc.stdout)
-
+  runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-001.xml"), meshes_directory)
+  
 def perPlates002():
-  proc = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-002.xml"), meshes_directory)
-  print(proc.stdout)
-
+  runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-002.xml"), meshes_directory)
+  
 def perPlates003():
-  proc = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-003.xml"), meshes_directory)
-  print(proc.stdout)
-
+  runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-003.xml"), meshes_directory)
+  
 def perPlates004():
-  proc = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-004.xml"), meshes_directory)
-  print(proc.stdout)
-
+  runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-004.xml"), meshes_directory)
+  
 def perPlates005():
-  proc = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-005.xml"), meshes_directory)
-  print(proc.stdout)
-
+  runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-005.xml"), meshes_directory)
+  
 def perPlates006():
-  proc = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-006.xml"), meshes_directory)
-  print(proc.stdout)
-
+  runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-006.xml"), meshes_directory)
+  
 def perPlates007():
-  proc = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-007.xml"), meshes_directory)
-  print(proc.stdout)
-
+  runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-007.xml"), meshes_directory)
+  
 def perPlates008():
-  proc = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-008.xml"), meshes_directory)
-  print(proc.stdout)
-
+  runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-008.xml"), meshes_directory)
+  
 def perPlates009():
-  proc = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-001.xml"), meshes_directory)
-  print(proc.stdout)
-
+  runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-001.xml"), meshes_directory)
+  
 def perPlates010():
-  proc = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-002.xml"), meshes_directory)
-  print(proc.stdout)
-
+  runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-002.xml"), meshes_directory)
+  
 def perPlates011():
-  proc = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-003.xml"), meshes_directory)
-  print(proc.stdout)
-
+  runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-003.xml"), meshes_directory)
+  
 def perPlates012():
-  proc = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-004.xml"), meshes_directory)
-  print(proc.stdout)
-
+  runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-004.xml"), meshes_directory)
+  
 def perPlates013():
-  proc = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-005.xml"), meshes_directory)
-  print(proc.stdout)
-
+  runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-005.xml"), meshes_directory)
+  
 def perPlates014():
-  proc = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-006.xml"), meshes_directory)
-  print(proc.stdout)
-
+  runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-006.xml"), meshes_directory)
+  
 def perPlates015():
-  proc = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-007.xml"), meshes_directory)
-  print(proc.stdout)
-
+  runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-007.xml"), meshes_directory)
+  
 def perPlates016():
-  proc = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-008.xml"), meshes_directory)
-  print(proc.stdout)
-
-
-
+  runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-008.xml"), meshes_directory)
+  
 def runAllTests():
   # perPlates001()
   # perPlates002()
@@ -92,6 +74,48 @@ def runAllTests():
   perPlates014()
   perPlates015()
   perPlates016()
+
+  passed_counter = 0
+  # if perPlates001():
+  #   passed_counter+=1
+  # if perPlates002():
+  #   passed_counter+=1
+  # if perPlates003():
+  #   passed_counter+=1
+  # if perPlates004():
+  #   passed_counter+=1
+  # if perPlates005():
+  #   passed_counter+=1
+  # if perPlates006():
+  #   passed_counter+=1
+  # if perPlates007():
+  #   passed_counter+=1
+  # if perPlates008():
+  #   passed_counter+=1
+  if perPlates009():
+    passed_counter+=1
+  if perPlates010():
+    passed_counter+=1
+  if perPlates011():
+    passed_counter+=1
+  if perPlates012():
+    passed_counter+=1
+  if perPlates013():
+    passed_counter+=1
+  if perPlates014():
+    passed_counter+=1
+  if perPlates015():
+    passed_counter+=1
+  if perPlates016():
+    passed_counter+=1
+
+  print("\n<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>")
+  print("|| ------------- PERPENDICULAR PLATES RESULTS ------------- ||")
+  print("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>\n")
+
+  print(f"Perpendicular Plates Results:\t {passed_counter} / 16 PASSED")
+
+  return passed_counter
 
 if __name__ == "__main__":
   runAllTests()

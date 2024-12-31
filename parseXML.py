@@ -50,7 +50,8 @@ def parseXML(filepath):
   print("Compute Back-End:\t\t", compute_option)
   print("Floating-Point Precision:\t", precision)
 
+  test_checks = { "analytic" : analytic_result, "tolerance" : tolerance }
   filepaths = { "emitter" : emitter, "receiver" : receiver, "blockers" : blockers }
   solver_settings = { "self-int" : intersection_option, "numerics" : numerical_method, "compute" : compute_option, "precision" : precision }
 
-  return { "filepaths" : filepaths, "solver-settings" : solver_settings }
+  return { "test" : test_checks, "filepaths" : filepaths, "solver-settings" : solver_settings }
