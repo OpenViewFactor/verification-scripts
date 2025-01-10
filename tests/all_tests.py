@@ -17,3 +17,6 @@ def runAllTests():
   print(f"Perpendicular Plates Results:\t {perpendicular_passed} / 16 PASSED")
   print(f"Parallel Discs Results:\t\t {parallel_discs_passed} / 8 PASSED")
   # print(f"Concentric Cylinders Results:\t {cylinders_passed} / 7 PASSED")
+
+if __name__ == "__main__":
+  runAllTests()
