@@ -4,6 +4,3 @@
 [submodule "submodules/verification-meshes"]
 	path = submodules/verification-meshes
 	url = https://github.com/OpenViewFactor/verification-meshes.git
-[submodule "submodules/ovf"]
-	path = submodules/ovf
-	url = https://github.com/OpenViewFactor/ovf.git
