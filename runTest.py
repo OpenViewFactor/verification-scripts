@@ -14,7 +14,7 @@ def runTest(xml_filepath, meshes_directory):
   print("<><><><><><><><><><><><><><><><><><><><>\n")
 
   proc = RunOVF.RunOVF(
-    OVF_EXE_PATH = os.path.join(current_file_directory, "submodules/ovf/build/ovf/cli/openviewfactor"),
+    OVF_EXE_PATH = os.path.join(os.getenv("MY_BINARY_DIR"),"Debug","openviewfactor"),
     INPUT_MESHES = [ os.path.join(meshes_directory, xml_specifications["filepaths"]["emitter"]), os.path.join(meshes_directory, xml_specifications["filepaths"]["receiver"]) ],
     # BLOCKING_MESHES = [ os.path.join(meshes_directory, xml_specifications["filepaths"]["blockers"]) ],
     INTERSECTION_OPTION = xml_specifications["solver-settings"]["self-int"],
@@ -31,9 +31,9 @@ def runTest(xml_filepath, meshes_directory):
   tolerance = xml_specifications["test"]["tolerance"]
   absolute_error = abs(result - analytic_result)
   print(f"Absolute Error:\t\t\t {absolute_error:E}")
-  relative_error = absolute_error / analytic_result
-  print(f"Relative Error:\t\t\t {relative_error:E}")
-  passed = relative_error < tolerance
+  normalized_absolute_error = absolute_error / analytic_result
+  print(f"Normalized Absolute Error:\t\t {normalized_absolute_error:E}")
+  passed = normalized_absolute_error < tolerance
   test_result = "PASSED" if passed else "FAILED"
   print(f"Test Result:\t\t\t {test_result}")
 

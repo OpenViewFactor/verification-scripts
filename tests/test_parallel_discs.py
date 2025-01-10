@@ -9,28 +9,36 @@ meshes_directory = os.path.join(current_file_directory, "../submodules/verificat
 xmls_directory = os.path.join(current_file_directory, "../test-xmls/asher-cases/coaxial-discs")
 
 def parDiscs001():
-  runTest.runTest(os.path.join(xmls_directory, "coaxial-discs-001.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-discs-001.xml"), meshes_directory)
+  return passed
 
 def parDiscs002():
-  runTest.runTest(os.path.join(xmls_directory, "coaxial-discs-002.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-discs-002.xml"), meshes_directory)
+  return passed
 
 def parDiscs003():
-  runTest.runTest(os.path.join(xmls_directory, "coaxial-discs-003.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-discs-003.xml"), meshes_directory)
+  return passed
   
 def parDiscs004():
-  runTest.runTest(os.path.join(xmls_directory, "coaxial-discs-004.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-discs-004.xml"), meshes_directory)
+  return passed
   
 def parDiscs005():
-  runTest.runTest(os.path.join(xmls_directory, "coaxial-discs-005.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-discs-005.xml"), meshes_directory)
+  return passed
   
 def parDiscs006():
-  runTest.runTest(os.path.join(xmls_directory, "coaxial-discs-006.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-discs-006.xml"), meshes_directory)
+  return passed
   
 def parDiscs007():
-  runTest.runTest(os.path.join(xmls_directory, "coaxial-discs-007.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-discs-007.xml"), meshes_directory)
+  return passed
   
 def parDiscs008():
-  runTest.runTest(os.path.join(xmls_directory, "coaxial-discs-008.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-discs-008.xml"), meshes_directory)
+  return passed
   
 def runAllTests():
   passed_counter = 0

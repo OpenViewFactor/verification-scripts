@@ -9,25 +9,32 @@ meshes_directory = os.path.join(current_file_directory, "../submodules/verificat
 xmls_directory = os.path.join(current_file_directory, "../test-xmls/asher-cases/coaxial-cylinders")
 
 def cylinders001():
-  runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-001.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-001.xml"), meshes_directory)
+  return passed
   
 def cylinders002():
-  runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-002.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-002.xml"), meshes_directory)
+  return passed
   
 def cylinders003():
-  runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-003.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-003.xml"), meshes_directory)
+  return passed
   
 def cylinders004():
-  runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-004.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-004.xml"), meshes_directory)
+  return passed
   
 def cylinders005():
-  runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-005.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-005.xml"), meshes_directory)
+  return passed
   
 def cylinders006():
-  runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-006.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-006.xml"), meshes_directory)
+  return passed
   
 def cylinders007():
-  runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-007.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-007.xml"), meshes_directory)
+  return passed
   
 def runAllTests():
   passed_counter = 0
