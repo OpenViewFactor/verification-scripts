@@ -12,7 +12,7 @@ def runTest(xml_filepath, meshes_directory):
   print("\n<><><><><><><><><><><><><><><><><><><><>")
   print("|| ---------- Solver Output --------- ||")
   print("<><><><><><><><><><><><><><><><><><><><>\n")
-
+  
   proc = RunOVF.RunOVF(
     OVF_EXE_PATH = os.path.join(os.getenv("MY_BINARY_DIR"),"openviewfactor"),
     INPUT_MESHES = [ os.path.join(meshes_directory, xml_specifications["filepaths"]["emitter"]), os.path.join(meshes_directory, xml_specifications["filepaths"]["receiver"]) ],

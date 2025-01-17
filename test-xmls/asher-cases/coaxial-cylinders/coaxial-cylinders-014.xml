@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DATA>
+
+    <TEST-DESCRIPTION>
+        <TEST-CONFIGURATION>r1/h=10.0 r2/h=32.0 concentric finite right cylinders</TEST-CONFIGURATION>
+        <AUTHOR>Natan Herzog</AUTHOR>
+        <DATE-CREATED>07/17/2023</DATE-CREATED>
+    </TEST-DESCRIPTION>
+
+    <TARGETS>
+        <ANALYTIC-RESULT>0.027077832758733</ANALYTIC-RESULT>
+        <EXPECTED-NUMERICAL-RESULT>0.027077832758733</EXPECTED-NUMERICAL-RESULT>
+        <TOLERANCE>1e-4</TOLERANCE>
+    </TARGETS>
+
+    <MESHES>
+        <EMITTER>inner-r1-h=10.0.stl</EMITTER>
+        <RECEIVER>outer-r2-h=32.0.stl</RECEIVER>
+        <BLOCKER>NONE</BLOCKER>
+    </MESHES>
+
+    <SETTINGS>
+        <SELF-INT>NONE</SELF-INT>
+        <METHOD>SAI</METHOD>
+        <PRECISION>DOUBLE</PRECISION>
+        <COMPUTE>CPU_N</COMPUTE>
+    </SETTINGS>
+
+</DATA>

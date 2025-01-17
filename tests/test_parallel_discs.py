@@ -39,33 +39,84 @@ def parDiscs007():
 def parDiscs008():
   passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-discs-008.xml"), meshes_directory)
   return passed
+
+def parDiscs009():
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-discs-009.xml"), meshes_directory)
+  return passed
+
+def parDiscs010():
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-discs-010.xml"), meshes_directory)
+  return passed
+
+def parDiscs011():
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-discs-011.xml"), meshes_directory)
+  return passed
   
-def runAllTests():
-  passed_counter = 0
-  if parDiscs001():
-    passed_counter+=1
-  if parDiscs002():
-    passed_counter+=1
-  if parDiscs003():
-    passed_counter+=1
-  if parDiscs004():
-    passed_counter+=1
-  if parDiscs005():
-    passed_counter+=1
-  if parDiscs006():
-    passed_counter+=1
-  if parDiscs007():
-    passed_counter+=1
-  if parDiscs008():
-    passed_counter+=1
+def parDiscs012():
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-discs-012.xml"), meshes_directory)
+  return passed
+  
+def parDiscs013():
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-discs-013.xml"), meshes_directory)
+  return passed
+  
+def parDiscs014():
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-discs-014.xml"), meshes_directory)
+  return passed
+  
+def parDiscs015():
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-discs-015.xml"), meshes_directory)
+  return passed
+  
+def parDiscs016():
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-discs-016.xml"), meshes_directory)
+  return passed
+  
+def runAllTests(mode = "ALL"):
+  dai_passed_counter = 0
+  if mode == "ALL" or mode == "DAI":
+    if parDiscs001():
+      dai_passed_counter+=1
+    if parDiscs002():
+      dai_passed_counter+=1
+    if parDiscs003():
+      dai_passed_counter+=1
+    if parDiscs004():
+      dai_passed_counter+=1
+    if parDiscs005():
+      dai_passed_counter+=1
+    if parDiscs006():
+      dai_passed_counter+=1
+    if parDiscs007():
+      dai_passed_counter+=1
+    if parDiscs008():
+      dai_passed_counter+=1
+  sai_passed_counter = 0
+  if mode == "ALL" or mode == "SAI":
+    if parDiscs009():
+      sai_passed_counter+=1
+    if parDiscs010():
+      sai_passed_counter+=1
+    if parDiscs011():
+      sai_passed_counter+=1
+    if parDiscs012():
+      sai_passed_counter+=1
+    if parDiscs013():
+      sai_passed_counter+=1
+    if parDiscs014():
+      sai_passed_counter+=1
+    if parDiscs015():
+      sai_passed_counter+=1
+    if parDiscs016():
+      sai_passed_counter+=1
 
   print("\n<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>")
   print("|| ---------------- PARALLEL DISCS RESULTS ---------------- ||")
   print("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>\n")
 
-  print(f"Parallel Discs Results:\t\t {passed_counter} / 8 PASSED")
+  print(f"Parallel Discs Results (DAI):\t {dai_passed_counter} / 8 PASSED")
+  print(f"Parallel Discs Results (SAI):\t {sai_passed_counter} / 8 PASSED")
 
-  return passed_counter
-
+  return dai_passed_counter + sai_passed_counter
 if __name__ == "__main__":
   runAllTests()

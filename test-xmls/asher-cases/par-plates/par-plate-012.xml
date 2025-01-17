@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DATA>
+
+    <TEST-DESCRIPTION>
+        <TEST-CONFIGURATION>Xbar=0.6 Ybar=0.6 parallel plates</TEST-CONFIGURATION>
+        <AUTHOR>Natan Herzog</AUTHOR>
+        <DATE-CREATED>07/14/2023</DATE-CREATED>
+    </TEST-DESCRIPTION>
+
+    <TARGETS>
+        <ANALYTIC-RESULT>0.093362337840650</ANALYTIC-RESULT>
+        <EXPECTED-NUMERICAL-RESULT>0.093362337840650</EXPECTED-NUMERICAL-RESULT>
+        <TOLERANCE>1e-4</TOLERANCE>
+    </TARGETS>
+
+    <MESHES>
+        <EMITTER>bottom-xbar=0.6-ybar=0.6.stl</EMITTER>
+        <RECEIVER>top-xbar=0.6-ybar=0.6.stl</RECEIVER>
+        <BLOCKER>NONE</BLOCKER>
+    </MESHES>
+
+    <SETTINGS>
+        <SELF-INT>NONE</SELF-INT>
+        <METHOD>SAI</METHOD>
+        <PRECISION>DOUBLE</PRECISION>
+        <COMPUTE>CPU_N</COMPUTE>
+    </SETTINGS>
+
+</DATA>

@@ -39,33 +39,85 @@ def parPlates007():
 def parPlates008():
   passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-008.xml"), meshes_directory)
   return passed
+
+def parPlates009():
+  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-009.xml"), meshes_directory)
+  return passed
+
+def parPlates010():
+  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-010.xml"), meshes_directory)
+  return passed
+
+def parPlates011():
+  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-011.xml"), meshes_directory)
+  return passed
+
+def parPlates012():
+  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-012.xml"), meshes_directory)
+  return passed
+
+def parPlates013():
+  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-013.xml"), meshes_directory)
+  return passed
+
+def parPlates014():
+  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-014.xml"), meshes_directory)
+  return passed
+
+def parPlates015():
+  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-015.xml"), meshes_directory)
+  return passed
+
+def parPlates016():
+  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-016.xml"), meshes_directory)
+  return passed
   
-def runAllTests():
-  passed_counter = 0
-  if parPlates001():
-    passed_counter+=1
-  if parPlates002():
-    passed_counter+=1
-  if parPlates003():
-    passed_counter+=1
-  if parPlates004():
-    passed_counter+=1
-  if parPlates005():
-    passed_counter+=1
-  if parPlates006():
-    passed_counter+=1
-  if parPlates007():
-    passed_counter+=1
-  if parPlates008():
-    passed_counter+=1
+def runAllTests(mode = "ALL"):
+  dai_passed_counter = 0
+  if mode == "ALL" or mode == "DAI":
+    if parPlates001():
+      dai_passed_counter+=1
+    if parPlates002():
+      dai_passed_counter+=1
+    if parPlates003():
+      dai_passed_counter+=1
+    if parPlates004():
+      dai_passed_counter+=1
+    if parPlates005():
+      dai_passed_counter+=1
+    if parPlates006():
+      dai_passed_counter+=1
+    if parPlates007():
+      dai_passed_counter+=1
+    if parPlates008():
+      dai_passed_counter+=1
+  sai_passed_counter = 0
+  if mode == "ALL" or mode == "SAI":
+    if parPlates009():
+      sai_passed_counter+=1
+    if parPlates010():
+      sai_passed_counter+=1
+    if parPlates011():
+      sai_passed_counter+=1
+    if parPlates012():
+      sai_passed_counter+=1
+    if parPlates013():
+      sai_passed_counter+=1
+    if parPlates014():
+      sai_passed_counter+=1
+    if parPlates015():
+      sai_passed_counter+=1
+    if parPlates016():
+      sai_passed_counter+=1
 
   print("\n<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>")
-  print("|| --------------- PARALLEL PLATES RESULTS ---------------- ||")
+  print("|| ---------------- PARALLEL PLATES RESULTS --------------- ||")
   print("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>\n")
 
-  print(f"Parallel Plates Results:\t {passed_counter} / 8 PASSED")
+  print(f"Parallel Plates Results (DAI):\t {dai_passed_counter} / 8 PASSED")
+  print(f"Parallel Plates Results (SAI):\t {sai_passed_counter} / 8 PASSED")
 
-  return passed_counter
+  return dai_passed_counter + sai_passed_counter
 
 if __name__ == "__main__":
   runAllTests()

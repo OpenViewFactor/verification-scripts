@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DATA>
+
+    <TEST-DESCRIPTION>
+        <TEST-CONFIGURATION>Z/X=0.1 Y/X=0.1 perpendicular plates (shared edge)</TEST-CONFIGURATION>
+        <AUTHOR>Natan Herzog</AUTHOR>
+        <DATE-CREATED>07/16/2023</DATE-CREATED>
+    </TEST-DESCRIPTION>
+
+    <TARGETS>
+        <ANALYTIC-RESULT>0.281887806787901</ANALYTIC-RESULT>
+        <EXPECTED-NUMERICAL-RESULT>0.281887806787901</EXPECTED-NUMERICAL-RESULT>
+        <TOLERANCE>1e-4</TOLERANCE>
+    </TARGETS>
+
+    <MESHES>
+        <EMITTER>horizontal-z-x=0.1-y-x=0.1.stl</EMITTER>
+        <RECEIVER>vertical-z-x=0.1-y-x=0.1.stl</RECEIVER>
+        <BLOCKER>NONE</BLOCKER>
+    </MESHES>
+
+    <SETTINGS>
+        <SELF-INT>NONE</SELF-INT>
+        <METHOD>SAI</METHOD>
+        <PRECISION>DOUBLE</PRECISION>
+        <COMPUTE>CPU_N</COMPUTE>
+    </SETTINGS>
+
+</DATA>
