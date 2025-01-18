@@ -3,20 +3,20 @@
 <DATA>
 
     <TEST-DESCRIPTION>
-        <TEST-CONFIGURATION>Z/X=10.0 Y/X=10.0 perpendicular plates (nonsharing)</TEST-CONFIGURATION>
+        <TEST-CONFIGURATION>Y/X=10.0 Y-offset=0.1 Z/X=10.0 Z-offset=0.1 perpendicular plates (nonsharing)</TEST-CONFIGURATION>
         <AUTHOR>Natan Herzog</AUTHOR>
-        <DATE-CREATED>07/17/2023</DATE-CREATED>
+        <DATE-CREATED>01-17-2025</DATE-CREATED>
     </TEST-DESCRIPTION>
 
     <TARGETS>
-        <ANALYTIC-RESULT>7.918234825e-3</ANALYTIC-RESULT>
-        <EXPECTED-NUMERICAL-RESULT>7.918234892e-3</EXPECTED-NUMERICAL-RESULT>
+        <ANALYTIC-RESULT>0.049213054565814</ANALYTIC-RESULT>
+        <EXPECTED-NUMERICAL-RESULT>0.049213054565814</EXPECTED-NUMERICAL-RESULT>
         <TOLERANCE>1e-4</TOLERANCE>
     </TARGETS>
 
     <MESHES>
-        <EMITTER>assets\participatory\perpendicular-rectangles\z-x-10-y-x-10/horz_262144TB.STL</EMITTER>
-        <RECEIVER>assets\participatory\perpendicular-rectangles\z-x-10-y-x-10/vert_262144TB.STL</RECEIVER>
+        <EMITTER></EMITTER>
+        <RECEIVER></RECEIVER>
         <BLOCKER>NONE</BLOCKER>
     </MESHES>
 
