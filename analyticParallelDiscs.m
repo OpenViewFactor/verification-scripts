@@ -17,7 +17,7 @@ function Fij = analyticParallelDiscs(ri, rj, L)
   Ri = ri/L;
   Rj = rj/L;
   S = 1 + ( (1+Rj^2)/ Ri^2);
-  Fij = (1/2) * ( S - sqrt( S^2 - 4*( ri/ri )^2 ) );
+  Fij = (1/2) * ( S - sqrt( S^2 - 4*( rj/ri )^2 ) );
 
   fprintf('Analytic Result: %.15f\n', Fij)
 end
