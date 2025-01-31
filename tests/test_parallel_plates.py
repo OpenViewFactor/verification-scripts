@@ -5,7 +5,7 @@ current_file_directory = os.path.dirname(__file__)
 sys.path.append(os.path.join(current_file_directory, '..'))
 import runTest
 
-meshes_directory = os.path.join(current_file_directory, "../submodules/verification-meshes/aligned-parallel-rectangles")
+meshes_directory = os.path.join(current_file_directory, "../submodules/verification-meshes/algnd-par-rect-10034els")
 xmls_directory = os.path.join(current_file_directory, "../test-xmls/asher-cases/par-plates")
 
 def parPlates001():

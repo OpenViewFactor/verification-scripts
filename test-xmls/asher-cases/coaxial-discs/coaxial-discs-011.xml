@@ -15,8 +15,8 @@
     </TARGETS>
 
     <MESHES>
-        <EMITTER>bottom-r=1.0.stl</EMITTER>
-        <RECEIVER>top-r=1.0.stl</RECEIVER>
+        <EMITTER>bottom-r=1.stl</EMITTER>
+        <RECEIVER>top-r=1-sep=1.stl</RECEIVER>
         <BLOCKER>NONE</BLOCKER>
     </MESHES>
 

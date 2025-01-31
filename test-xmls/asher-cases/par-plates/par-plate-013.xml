@@ -15,8 +15,8 @@
     </TARGETS>
 
     <MESHES>
-        <EMITTER>bottom-xbar=1-ybar=1.stl</EMITTER>
-        <RECEIVER>top-xbar=1-ybar=1.stl</RECEIVER>
+        <EMITTER>bottom-xDim=1-yDim=1.stl</EMITTER>
+        <RECEIVER>top-xDim=1-yDim=1-sep=1.stl</RECEIVER>
         <BLOCKER>NONE</BLOCKER>
     </MESHES>
 

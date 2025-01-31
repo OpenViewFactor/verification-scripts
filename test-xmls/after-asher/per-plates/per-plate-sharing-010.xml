@@ -3,7 +3,7 @@
 <DATA>
 
     <TEST-DESCRIPTION>
-        <TEST-CONFIGURATION>Z/X=0.2 Y/X=0.2 perpendicular plates (shared edge)</TEST-CONFIGURATION>
+        <TEST-CONFIGURATION>Y/X=0.2 Z/X=0.2 perpendicular plates (shared edge)</TEST-CONFIGURATION>
         <AUTHOR>Natan Herzog</AUTHOR>
         <DATE-CREATED>01-17-2025</DATE-CREATED>
     </TEST-DESCRIPTION>
@@ -15,8 +15,8 @@
     </TARGETS>
 
     <MESHES>
-        <EMITTER>horizontal-z-x=0.2-y-x=0.2.stl</EMITTER>
-        <RECEIVER>vertical-z-x=0.2-y-x=0.2.stl</RECEIVER>
+        <EMITTER>horizontal-horzDim=0.2-shrdDim=1.stl</EMITTER>
+        <RECEIVER>vertical-vertDim=0.2-shrdDim=1.stl</RECEIVER>
         <BLOCKER>NONE</BLOCKER>
     </MESHES>
 
