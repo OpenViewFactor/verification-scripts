@@ -35,6 +35,34 @@ def cylinders006():
 def cylinders007():
   passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-007.xml"), meshes_directory)
   return passed
+
+def cylinders008():
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-008.xml"), meshes_directory)
+  return passed
+  
+def cylinders009():
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-009.xml"), meshes_directory)
+  return passed
+  
+def cylinders010():
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-010.xml"), meshes_directory)
+  return passed
+  
+def cylinders011():
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-011.xml"), meshes_directory)
+  return passed
+  
+def cylinders012():
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-012.xml"), meshes_directory)
+  return passed
+  
+def cylinders013():
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-013.xml"), meshes_directory)
+  return passed
+  
+def cylinders014():
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-014.xml"), meshes_directory)
+  return passed
   
 def runAllTests():
   passed_counter = 0
@@ -52,12 +80,26 @@ def runAllTests():
     passed_counter+=1
   if cylinders007():
     passed_counter+=1
+  if cylinders008():
+    passed_counter+=1
+  if cylinders009():
+    passed_counter+=1
+  if cylinders010():
+    passed_counter+=1
+  if cylinders011():
+    passed_counter+=1
+  if cylinders012():
+    passed_counter+=1
+  if cylinders013():
+    passed_counter+=1
+  if cylinders014():
+    passed_counter+=1
 
   print("\n<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>")
   print("|| ------------- CONCENTRIC CYLINDERS RESULTS ------------- ||")
   print("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>\n")
 
-  print(f"Concentric Cylinders Results:\t {passed_counter} / 7 PASSED")
+  print(f"Concentric Cylinders Results:\t {passed_counter} / 14 PASSED")
 
   return passed_counter
 

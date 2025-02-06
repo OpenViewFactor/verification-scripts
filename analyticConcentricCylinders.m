@@ -39,5 +39,10 @@ function [F12, F13, F21, F22, F23] = analyticConcentricCylinders(ri, ro, H)
   F22 = 1 - (1/R) + ((2/(pi*R)) * atan(2*sqrt(R^2-1)/h)) - (h*f7)/(2*pi*R);
   F23 = 1 - F21 - F22;
 
+
+
+  R = ro / ri; h = H / ri; A = h^2 + R^2 - 1; B = h^2 - R^2 + 1;
+  F12 = a2/a1 * ( 1/R - 1/(pi*R)*( acos(B/A) - 1/(2*h)*( sqrt( (A+2)^2 - (2*R)^2 )*acos(B/(R*A)) + B*asin(1/R) - (pi*A)/2) ) );
+
   fprintf('Analytic Result: %.15f\n', F12)
 end

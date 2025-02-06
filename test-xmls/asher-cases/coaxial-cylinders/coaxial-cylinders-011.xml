@@ -15,8 +15,8 @@
     </TARGETS>
 
     <MESHES>
-        <EMITTER>inner-r1=0.75-h=1.stl</EMITTER>
-        <RECEIVER>outer-r2=1-h=1.stl</RECEIVER>
+        <EMITTER>inner-r=0.75-h=1.stl</EMITTER>
+        <RECEIVER>outer-r=1-h=1.stl</RECEIVER>
         <BLOCKER>NONE</BLOCKER>
     </MESHES>
 
