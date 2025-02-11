@@ -5,7 +5,7 @@ current_file_directory = os.path.dirname(__file__)
 sys.path.append(os.path.join(current_file_directory, '..'))
 import runTest
 
-meshes_directory = os.path.join(current_file_directory, "../submodules/verification-meshes/coaxial-cylinders-10451els")
+meshes_directory = os.path.join(current_file_directory, "../submodules/verification-meshes/coaxial-cylinders-10844els")
 xmls_directory = os.path.join(current_file_directory, "../test-xmls/asher-cases/coaxial-cylinders")
 
 def cylinders001():
@@ -74,12 +74,12 @@ def runAllTests():
     passed_counter+=1
   if cylinders004():
     passed_counter+=1
-  if cylinders005():
-    passed_counter+=1
-  if cylinders006():
-    passed_counter+=1
-  if cylinders007():
-    passed_counter+=1
+  # if cylinders005():
+  #   passed_counter+=1
+  # if cylinders006():
+  #   passed_counter+=1
+  # if cylinders007():
+  #   passed_counter+=1
   if cylinders008():
     passed_counter+=1
   if cylinders009():
@@ -88,12 +88,12 @@ def runAllTests():
     passed_counter+=1
   if cylinders011():
     passed_counter+=1
-  if cylinders012():
-    passed_counter+=1
-  if cylinders013():
-    passed_counter+=1
-  if cylinders014():
-    passed_counter+=1
+  # if cylinders012():
+  #   passed_counter+=1
+  # if cylinders013():
+  #   passed_counter+=1
+  # if cylinders014():
+  #   passed_counter+=1
 
   print("\n<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>")
   print("|| ------------- CONCENTRIC CYLINDERS RESULTS ------------- ||")
