@@ -5,7 +5,7 @@ current_file_directory = os.path.dirname(__file__)
 sys.path.append(os.path.join(current_file_directory, '..'))
 import runTest
 
-meshes_directory = os.path.join(current_file_directory, "../submodules/verification-meshes/coaxial-cylinders-10844els")
+meshes_directory = os.path.join(current_file_directory, "../submodules/verification-meshes/coaxial-cylinders")
 xmls_directory = os.path.join(current_file_directory, "../test-xmls/asher-cases/coaxial-cylinders")
 
 def cylinders001():
