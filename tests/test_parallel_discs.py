@@ -6,7 +6,7 @@ sys.path.append(os.path.join(current_file_directory, '..'))
 import runTest
 
 meshes_directory = os.path.join(current_file_directory, "../submodules/verification-meshes/coaxial-discs-10221els")
-xmls_directory = os.path.join(current_file_directory, "../test-xmls/asher-cases/coaxial-discs")
+xmls_directory = os.path.join(current_file_directory, "../test-xmls/coaxial-discs")
 
 def parDiscs001():
   passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-discs-001.xml"), meshes_directory)

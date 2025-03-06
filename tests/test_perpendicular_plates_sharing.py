@@ -6,7 +6,7 @@ sys.path.append(os.path.join(current_file_directory, '..'))
 import runTest
 
 meshes_directory = os.path.join(current_file_directory, "../submodules/verification-meshes/prp-rect-approx10000els")
-sharing_xmls_directory = os.path.join(current_file_directory, '../test-xmls/after-asher/per-plates')
+sharing_xmls_directory = os.path.join(current_file_directory, '../test-xmls/per-plates')
 
 def perPlatesSharing001():
   passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-001.xml"), meshes_directory)

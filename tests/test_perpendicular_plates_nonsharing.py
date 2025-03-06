@@ -6,7 +6,7 @@ sys.path.append(os.path.join(current_file_directory, '..'))
 import runTest
 
 meshes_directory = os.path.join(current_file_directory, "../submodules/verification-meshes/perpendicular-rectangles")
-non_sharing_xmls_directory = os.path.join(current_file_directory, "../test-xmls/asher-cases/per-plates")
+non_sharing_xmls_directory = os.path.join(current_file_directory, "../test-xmls/per-plates")
 
 def perPlates001():
   passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-001.xml"), meshes_directory)

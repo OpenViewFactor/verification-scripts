@@ -6,7 +6,7 @@ sys.path.append(os.path.join(current_file_directory, '..'))
 import runTest
 
 meshes_directory = os.path.join(current_file_directory, "../submodules/verification-meshes/algnd-par-rect-10034els")
-xmls_directory = os.path.join(current_file_directory, "../test-xmls/asher-cases/par-plates")
+xmls_directory = os.path.join(current_file_directory, "../test-xmls/par-plates")
 
 def parPlates001():
   passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-001.xml"), meshes_directory)
