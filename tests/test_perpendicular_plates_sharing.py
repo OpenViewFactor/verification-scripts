@@ -5,7 +5,7 @@ current_file_directory = os.path.dirname(__file__)
 sys.path.append(os.path.join(current_file_directory, '..'))
 import runTest
 
-meshes_directory = os.path.join(current_file_directory, "../submodules/verification-meshes/prp-rect-approx10000els")
+meshes_directory = os.path.join(current_file_directory, "../submodules/verification-meshes/perpendicular-plates")
 sharing_xmls_directory = os.path.join(current_file_directory, '../test-xmls/per-plates')
 
 def perPlatesSharing001():
