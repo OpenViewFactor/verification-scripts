@@ -20,11 +20,9 @@ def parseXML(filepath):
 
   targets = xml_root.findall('TARGETS')[0]
   analytic_result = float(targets.findall('ANALYTIC-RESULT')[0].text)
-  expect_numerical_result = float(targets.findall('EXPECTED-NUMERICAL-RESULT')[0].text)
   tolerance = float(targets.findall('TOLERANCE')[0].text)
 
   print("Analytic Result:\t\t", analytic_result)
-  print("Expected Numerical Result:\t", expect_numerical_result)
   print("Test Tolerance:\t\t\t", tolerance)
 
   print("< ------------- Meshes -------------- >")
@@ -39,19 +37,36 @@ def parseXML(filepath):
   print("Blockers:\t\t\t", blockers)
 
   print("< --------- Solver Settings --------- >")
-  settings = xml_root.findall('SETTINGS')[0]
-  intersection_option = settings.findall('SELF-INT')[0].text
-  numerical_method = settings.findall('METHOD')[0].text
-  compute_option = settings.findall('COMPUTE')[0].text
-  precision = settings.findall('PRECISION')[0].text
+  settings        = xml_root.findall('SETTINGS')[0]
+  self_int        = settings.findall('s')[0].text
+  blocking_type   = settings.findall('t')[0].text
+  back_face_mode  = settings.findall('f')[0].text
+  numerics        = settings.findall('n')[0].text
+  precision       = settings.findall('p')[0].text
+  compute         = settings.findall('c')[0].text
+  matrix_out      = settings.findall('m')[0].text
+  graphic_out     = settings.findall('g')[0].text
+  bvh_out         = settings.findall('b')[0].text
+  log_out         = settings.findall('l')[0].text
 
-  print("Self-Intersection:\t\t", intersection_option)
-  print("Numerical Method:\t\t", numerical_method)
-  print("Compute Back-End:\t\t", compute_option)
+  print("Self-Intersection:\t\t", self_int)
+  print("Blocking Mode:\t\t\t", blocking_type)
+  print("Back-face Culling Mode:\t", back_face_mode)
+  print("Numerical Method:\t\t", numerics)
   print("Floating-Point Precision:\t", precision)
+  print("Compute Back-End:\t\t", compute)
 
-  test_checks = { "analytic" : analytic_result, "tolerance" : tolerance }
+  test_data = { "analytic" : analytic_result, "tolerance" : tolerance }
   filepaths = { "emitter" : emitter, "receiver" : receiver, "blockers" : blockers }
-  solver_settings = { "self-int" : intersection_option, "numerics" : numerical_method, "compute" : compute_option, "precision" : precision }
+  solver_settings = { "self-int" : self_int,
+                      "blocking type" : blocking_type,
+                      "back-face cull mode" : back_face_mode,
+                      "numerics" : numerics,
+                      "precision" : precision,
+                      "compute" : compute,
+                      "matrix output" : matrix_out,
+                      "graphic output" : graphic_out,
+                      "bvh output" : bvh_out,
+                      "log output" : log_out}
 
-  return { "test" : test_checks, "filepaths" : filepaths, "solver-settings" : solver_settings }
+  return { "test data" : test_data, "filepaths" : filepaths, "solver settings" : solver_settings }

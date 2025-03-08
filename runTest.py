@@ -15,12 +15,18 @@ def runTest(xml_filepath, meshes_directory):
   
   proc = RunOVF.RunOVF(
     OVF_EXE_PATH = os.path.join(os.getenv("MY_BINARY_DIR"),"openviewfactor"),
-    INPUT_MESHES = [ os.path.join(meshes_directory, xml_specifications["filepaths"]["emitter"]), os.path.join(meshes_directory, xml_specifications["filepaths"]["receiver"]) ],
-    # BLOCKING_MESHES = [ os.path.join(meshes_directory, xml_specifications["filepaths"]["blockers"]) ],
-    INTERSECTION_OPTION = xml_specifications["solver-settings"]["self-int"],
-    NUMERICAL_METHOD = xml_specifications["solver-settings"]["numerics"],
-    COMPUTE_OPTION = xml_specifications["solver-settings"]["compute"],
-    PRECISION = xml_specifications["solver-settings"]["precision"]
+    inputs = [ os.path.join(meshes_directory, xml_specifications["filepaths"]["emitter"]), os.path.join(meshes_directory, xml_specifications["filepaths"]["receiver"]) ],
+    obstructions = [ os.path.join(meshes_directory, blocker) for blocker in xml_specifications["filepaths"]["blockers"] ],
+    selfint = xml_specifications["solver-settings"]["self-int"],
+    numerics = xml_specifications["solver-settings"]["numerics"],
+    compute = xml_specifications["solver-settings"]["compute"],
+    precision = xml_specifications["solver-settings"]["precision"],
+    backfacecull = xml_specifications["solver-settings"]["back-face cull mode"],
+    blockingtype = xml_specifications["solver-settings"]["blocking type"],
+    matrixout = xml_specifications["solver-settings"]["matrix output"],
+    graphicout = xml_specifications["solver-settings"]["graphic output"],
+    bvhout = xml_specifications["solver-settings"]["bvh output"],
+    logfile = xml_specifications["solver-settings"]["log output"]
   )
 
   result = float(proc.stdout.split("[RESULT] ")[1].split("[LOG]")[0].split(':')[1])
