@@ -3,28 +3,33 @@
 <DATA>
 
     <TEST-DESCRIPTION>
-        <TEST-CONFIGURATION>concentric spheres r1=1.5 r2=2</TEST-CONFIGURATION>
+        <TEST-CONFIGURATION>concentric spheres r1=1 r2=3</TEST-CONFIGURATION>
         <AUTHOR>Natan Herzog</AUTHOR>
         <DATE-CREATED>01-17-2025</DATE-CREATED>
     </TEST-DESCRIPTION>
 
     <TARGETS>
         <ANALYTIC-RESULT>1</ANALYTIC-RESULT>
-        <EXPECTED-NUMERICAL-RESULT>1</EXPECTED-NUMERICAL-RESULT>
         <TOLERANCE>1e-4</TOLERANCE>
     </TARGETS>
 
     <MESHES>
-        <EMITTER>assets\participatory\concentric-spheres\inner-sphere-r1=1.5.stl</EMITTER>
-        <RECEIVER>assets\participatory\concentric-spheres\outer-sphere-r2=2.stl</RECEIVER>
+        <EMITTER>inner-sphere-r1=1.stl</EMITTER>
+        <RECEIVER>outer-sphere-r2=3.stl</RECEIVER>
         <BLOCKER>NONE</BLOCKER>
     </MESHES>
 
     <SETTINGS>
-        <SELF-INT>NONE</SELF-INT>
-        <METHOD>DAIMT</METHOD>
-        
-        <PRECISION>DOUBLE</PRECISION>
+        <s>NONE</s>
+        <t>BVH</t>
+        <f>ON</f>
+        <n>DAI</n>
+        <p>DOUBLE</p>
+        <c>CPU_N</c>
+        <m>NONE</m>
+        <g>NONE</g>
+        <b>NONE</b>
+        <l>test_outputs\logs\concentric-spheres-003</l>
     </SETTINGS>
 
 </DATA>

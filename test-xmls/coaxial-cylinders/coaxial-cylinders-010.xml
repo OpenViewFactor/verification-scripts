@@ -10,7 +10,6 @@
 
     <TARGETS>
         <ANALYTIC-RESULT>0.816594634814723</ANALYTIC-RESULT>
-        <EXPECTED-NUMERICAL-RESULT>0.816594634814723</EXPECTED-NUMERICAL-RESULT>
         <TOLERANCE>1e-4</TOLERANCE>
     </TARGETS>
 
@@ -21,10 +20,16 @@
     </MESHES>
 
     <SETTINGS>
-        <SELF-INT>NONE</SELF-INT>
-        <METHOD>SAI</METHOD>
-        <PRECISION>DOUBLE</PRECISION>
-        <COMPUTE>CPU_N</COMPUTE>
+        <s>NONE</s>
+        <t>BVH</t>
+        <f>ON</f>
+        <n>SAI</n>
+        <p>DOUBLE</p>
+        <c>CPU_N</c>
+        <m>NONE</m>
+        <g>NONE</g>
+        <b>NONE</b>
+        <l>test_outputs\logs\cylinders\coaxial-cylinders-010</l>
     </SETTINGS>
 
 </DATA>
