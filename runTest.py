@@ -1,4 +1,4 @@
-import os, sys
+import os, sys, pdb
 
 current_file_directory = os.path.dirname(__file__)
 
@@ -12,23 +12,27 @@ def runTest(xml_filepath, meshes_directory):
   print("\n<><><><><><><><><><><><><><><><><><><><>")
   print("|| ---------- Solver Output --------- ||")
   print("<><><><><><><><><><><><><><><><><><><><>\n")
+
+  log_path = xml_specifications["solver settings"]["log output"]
+  split_path = log_path.split("/")
   
-  proc = RunOVF.RunOVF(
-    OVF_EXE_PATH = os.path.join(os.getenv("MY_BINARY_DIR"),"openviewfactor"),
+  RunOVF.RunOVF(
+    OVF_EXE_PATH = os.path.join(os.getenv("MY_BINARY_DIR"),"ovf"),
     inputs = [ os.path.join(meshes_directory, xml_specifications["filepaths"]["emitter"]), os.path.join(meshes_directory, xml_specifications["filepaths"]["receiver"]) ],
     obstructions = [ os.path.join(meshes_directory, blocker) for blocker in xml_specifications["filepaths"]["blockers"] ],
-    selfint = xml_specifications["solver-settings"]["self-int"],
-    numerics = xml_specifications["solver-settings"]["numerics"],
-    compute = xml_specifications["solver-settings"]["compute"],
-    precision = xml_specifications["solver-settings"]["precision"],
-    backfacecull = xml_specifications["solver-settings"]["back-face cull mode"],
-    blockingtype = xml_specifications["solver-settings"]["blocking type"],
-    matrixout = xml_specifications["solver-settings"]["matrix output"],
-    graphicout = xml_specifications["solver-settings"]["graphic output"],
-    bvhout = xml_specifications["solver-settings"]["bvh output"],
-    logfile = xml_specifications["solver-settings"]["log output"]
+    selfint = xml_specifications["solver settings"]["self-int"],
+    numerics = xml_specifications["solver settings"]["numerics"],
+    compute = xml_specifications["solver settings"]["compute"],
+    precision = xml_specifications["solver settings"]["precision"],
+    backfacecull = xml_specifications["solver settings"]["back-face cull mode"],
+    blockingtype = xml_specifications["solver settings"]["blocking type"],
+    matrixout = xml_specifications["solver settings"]["matrix output"],
+    graphicout = xml_specifications["solver settings"]["graphic output"],
+    bvhout = xml_specifications["solver settings"]["bvh output"],
+    logfile = xml_specifications["solver settings"]["log output"]
   )
 
+  breakpoint()
   result = float(proc.stdout.split("[RESULT] ")[1].split("[LOG]")[0].split(':')[1])
 
   print(f"Surface-Surface View Factor:\t {result}")
