@@ -47,7 +47,6 @@ def parseXML(filepath):
   matrix_out      = settings.findall('m')[0].text
   graphic_out     = settings.findall('g')[0].text
   bvh_out         = settings.findall('b')[0].text
-  log_out         = settings.findall('l')[0].text
 
   print("Self-Intersection:\t\t", self_int)
   print("Blocking Mode:\t\t\t", blocking_type)
@@ -66,7 +65,6 @@ def parseXML(filepath):
                       "compute" : compute,
                       "matrix output" : matrix_out,
                       "graphic output" : graphic_out,
-                      "bvh output" : bvh_out,
-                      "log output" : log_out}
+                      "bvh output" : bvh_out}
 
   return { "test data" : test_data, "filepaths" : filepaths, "solver settings" : solver_settings }

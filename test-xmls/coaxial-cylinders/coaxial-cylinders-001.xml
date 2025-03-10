@@ -10,7 +10,7 @@
 
     <TARGETS>
         <ANALYTIC-RESULT>0.910868433007748</ANALYTIC-RESULT>
-        <TOLERANCE>1e-4</TOLERANCE>
+        <TOLERANCE>1e-10</TOLERANCE>
     </TARGETS>
 
     <MESHES>
@@ -29,7 +29,6 @@
         <m>NONE</m>
         <g>NONE</g>
         <b>NONE</b>
-        <l>test_outputs\logs\cylinders\coaxial-cylinders-001</l>
     </SETTINGS>
 
 </DATA>

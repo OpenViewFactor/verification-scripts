@@ -3,19 +3,19 @@
 <DATA>
 
     <TEST-DESCRIPTION>
-        <TEST-CONFIGURATION>concentric spheres r1=3 r2=1</TEST-CONFIGURATION>
+        <TEST-CONFIGURATION>concentric spheres r=3 r=1</TEST-CONFIGURATION>
         <AUTHOR>Natan Herzog</AUTHOR>
         <DATE-CREATED>01-17-2025</DATE-CREATED>
     </TEST-DESCRIPTION>
 
     <TARGETS>
         <ANALYTIC-RESULT>0.333333333333333</ANALYTIC-RESULT>
-        <TOLERANCE>1e-4</TOLERANCE>
+        <TOLERANCE>1e-10</TOLERANCE>
     </TARGETS>
 
     <MESHES>
-        <EMITTER>outer-sphere-r2=3.stl</EMITTER>
-        <RECEIVER>inner-sphere-r1=1.stl</RECEIVER>
+        <EMITTER>outer_sphere_r=3.stl</EMITTER>
+        <RECEIVER>inner_sphere_r=1.stl</RECEIVER>
         <BLOCKER>NONE</BLOCKER>
     </MESHES>
 
@@ -29,7 +29,6 @@
         <m>NONE</m>
         <g>NONE</g>
         <b>NONE</b>
-        <l>test_outputs\logs\concentric-spheres-012</l>
     </SETTINGS>
 
 </DATA>

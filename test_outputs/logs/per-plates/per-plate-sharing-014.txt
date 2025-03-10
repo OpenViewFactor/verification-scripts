@@ -1,0 +1,45 @@
+[LOG] Solver Setting Loaded: Back Face Cull Mode -	OFF
+[LOG] Solver Setting Loaded: Blocking Mode -		BVH
+[LOG] Solver Setting Loaded: Self-Intersection Mode -	NONE
+[LOG] Solver Setting Loaded: Numeric Method -		SAI
+[LOG] Solver Setting Loaded: Compute Backend -		CPU_N
+[LOG] Solver Setting Loaded: Floating Point Precision -	DOUBLE
+[LOG] NO Blocker BVH Output
+[LOG] NO Plain Text Matrix Output
+[LOG] NO Graphic File Output
+[LOG] Loading Meshes
+[LOG] Loading Emitting Mesh : /home/natan/Development/OpenViewFactor/verification-scripts/tests/../submodules/verification-meshes/perpendicular-plates/horizontal-horzDim=2-shrdDim=1.stl
+ -----------------------------------------------------------------
+ [Size]					10561 Elements
+ [Aspect Ratio]		Mean		1.022033
+ [Aspect Ratio]		Median		1.002510
+ [Aspect Ratio]		Min / Max	1.000000 / 3.346955
+ [Element Quality]	Mean		0.996817
+ [Element Quality]	Median		0.999993
+ [Element Quality]	Min/Max		0.433614 / 1.000000
+ [Skewness]		Mean		0.004858
+ [Skewness]		Median		0.000010
+ [Skewness]		Min/Max		0.000000 / 0.857947
+ -----------------------------------------------------------------
+[LOG] Loading Receiving Mesh : /home/natan/Development/OpenViewFactor/verification-scripts/tests/../submodules/verification-meshes/perpendicular-plates/vertical-vertDim=2-shrdDim=1.stl
+ -----------------------------------------------------------------
+ [Size]					10561 Elements
+ [Aspect Ratio]		Mean		1.022033
+ [Aspect Ratio]		Median		1.002510
+ [Aspect Ratio]		Min / Max	1.000000 / 3.346960
+ [Element Quality]	Mean		0.996817
+ [Element Quality]	Median		0.999993
+ [Element Quality]	Min/Max		0.433614 / 1.000000
+ [Skewness]		Mean		0.004858
+ [Skewness]		Median		0.000010
+ [Skewness]		Min/Max		0.000000 / 0.857947
+ -----------------------------------------------------------------
+[LOG] NO Blocking Meshes Loaded
+[LOG] Meshes loaded in 0.026431 [s]
+[LOG] Problem Size: 111534721 Pairs
+[LOG] Evaluating View Factors
+[LOG] Applying Single Area Integration
+[LOG] View Factors completed in 1.216723 [s]
+[LOG] Evaluating Results
+[RESULT] Surface-Surface View Factor: 0.149300
+[LOG] Results evaluated in 0.548142 [s]

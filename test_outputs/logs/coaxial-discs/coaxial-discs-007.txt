@@ -1,0 +1,45 @@
+[LOG] Solver Setting Loaded: Back Face Cull Mode -	OFF
+[LOG] Solver Setting Loaded: Blocking Mode -		BVH
+[LOG] Solver Setting Loaded: Self-Intersection Mode -	NONE
+[LOG] Solver Setting Loaded: Numeric Method -		DAI
+[LOG] Solver Setting Loaded: Compute Backend -		CPU_N
+[LOG] Solver Setting Loaded: Floating Point Precision -	DOUBLE
+[LOG] NO Blocker BVH Output
+[LOG] NO Plain Text Matrix Output
+[LOG] NO Graphic File Output
+[LOG] Loading Meshes
+[LOG] Loading Emitting Mesh : /home/natan/Development/OpenViewFactor/verification-scripts/tests/../submodules/verification-meshes/coaxial-discs/bottom-r=0.2.stl
+ -----------------------------------------------------------------
+ [Size]					10221 Elements
+ [Aspect Ratio]		Mean		1.029193
+ [Aspect Ratio]		Median		1.005755
+ [Aspect Ratio]		Min / Max	1.000020 / 4.116041
+ [Element Quality]	Mean		0.996789
+ [Element Quality]	Median		0.999979
+ [Element Quality]	Min/Max		0.357541 / 1.000000
+ [Skewness]		Mean		0.005041
+ [Skewness]		Median		0.000032
+ [Skewness]		Min/Max		0.000000 / 0.916818
+ -----------------------------------------------------------------
+[LOG] Loading Receiving Mesh : /home/natan/Development/OpenViewFactor/verification-scripts/tests/../submodules/verification-meshes/coaxial-discs/top-r=10-sep=1.stl
+ -----------------------------------------------------------------
+ [Size]					10221 Elements
+ [Aspect Ratio]		Mean		1.029193
+ [Aspect Ratio]		Median		1.005755
+ [Aspect Ratio]		Min / Max	1.000022 / 4.116090
+ [Element Quality]	Mean		0.996789
+ [Element Quality]	Median		0.999979
+ [Element Quality]	Min/Max		0.357537 / 1.000000
+ [Skewness]		Mean		0.005041
+ [Skewness]		Median		0.000032
+ [Skewness]		Min/Max		0.000000 / 0.916820
+ -----------------------------------------------------------------
+[LOG] NO Blocking Meshes Loaded
+[LOG] Meshes loaded in 0.024671 [s]
+[LOG] Problem Size: 104468841 Pairs
+[LOG] Evaluating View Factors
+[LOG] Applying Double Area Integration
+[LOG] View Factors completed in 0.656783 [s]
+[LOG] Evaluating Results
+[RESULT] Surface-Surface View Factor: 0.990176
+[LOG] Results evaluated in 0.523619 [s]

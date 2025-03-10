@@ -7,69 +7,70 @@ import runTest
 
 meshes_directory = os.path.join(current_file_directory, "../submodules/verification-meshes/parallel-plates")
 xmls_directory = os.path.join(current_file_directory, "../test-xmls/par-plates")
+test_log_directory = os.path.join(current_file_directory, "../test_outputs/logs/par-plates")
 
 def parPlates001():
-  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-001.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-001.xml"), meshes_directory, test_log_directory)
   return passed
   
 def parPlates002():
-  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-002.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-002.xml"), meshes_directory, test_log_directory)
   return passed
 
 def parPlates003():
-  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-003.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-003.xml"), meshes_directory, test_log_directory)
   return passed
   
 def parPlates004():
-  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-004.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-004.xml"), meshes_directory, test_log_directory)
   return passed
   
 def parPlates005():
-  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-005.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-005.xml"), meshes_directory, test_log_directory)
   return passed
   
 def parPlates006():
-  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-006.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-006.xml"), meshes_directory, test_log_directory)
   return passed
   
 def parPlates007():
-  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-007.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-007.xml"), meshes_directory, test_log_directory)
   return passed
   
 def parPlates008():
-  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-008.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-008.xml"), meshes_directory, test_log_directory)
   return passed
 
 def parPlates009():
-  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-009.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-009.xml"), meshes_directory, test_log_directory)
   return passed
 
 def parPlates010():
-  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-010.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-010.xml"), meshes_directory, test_log_directory)
   return passed
 
 def parPlates011():
-  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-011.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-011.xml"), meshes_directory, test_log_directory)
   return passed
 
 def parPlates012():
-  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-012.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-012.xml"), meshes_directory, test_log_directory)
   return passed
 
 def parPlates013():
-  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-013.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-013.xml"), meshes_directory, test_log_directory)
   return passed
 
 def parPlates014():
-  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-014.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-014.xml"), meshes_directory, test_log_directory)
   return passed
 
 def parPlates015():
-  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-015.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-015.xml"), meshes_directory, test_log_directory)
   return passed
 
 def parPlates016():
-  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-016.xml"), meshes_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "par-plate-016.xml"), meshes_directory, test_log_directory)
   return passed
   
 def runAllTests(mode = "ALL"):
