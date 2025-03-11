@@ -1,5 +1,6 @@
 import os, sys, pdb
 from pathlib import Path
+import platform
 
 current_file_directory = os.path.dirname(__file__)
 
@@ -14,8 +15,15 @@ def runTest(xml_filepath, test_log_directory, all_mesh_dir = None, emit_mesh_dir
   print("|| ---------- Solver Output --------- ||")
   print("<><><><><><><><><><><><><><><><><><><><>\n")
 
+  system = platform.system()
+
+  if system == "Windows":
+    path_split_character = "\\"
+  elif system == "Linux":
+    path_split_character = "/"
+
   xml_filepath_without_extension = xml_filepath.split(".")[-2]
-  xml_filename_without_path = xml_filepath_without_extension.split("/")[-1]
+  xml_filename_without_path = xml_filepath_without_extension.split(path_split_character)[-1]
   log_filepath = os.path.join(test_log_directory, xml_filename_without_path)
 
   if not all_mesh_dir == None:
