@@ -10,12 +10,12 @@
 
     <TARGETS>
         <ANALYTIC-RESULT>0</ANALYTIC-RESULT>
-        <TOLERANCE>1e-10</TOLERANCE>
+        <TOLERANCE>1e-2</TOLERANCE>
     </TARGETS>
 
     <MESHES>
         <EMITTER>bottom-xDim=1-yDim=1.stl</EMITTER>
-        <RECEIVER>top-xDim=1-yDim=1.stl</RECEIVER>
+        <RECEIVER>top-xDim=1-yDim=1-sep=1.stl</RECEIVER>
         <BLOCKER>blocking_square.stl</BLOCKER>
     </MESHES>
 

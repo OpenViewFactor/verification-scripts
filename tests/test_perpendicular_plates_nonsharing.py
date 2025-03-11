@@ -10,67 +10,67 @@ non_sharing_xmls_directory = os.path.join(current_file_directory, "../test-xmls/
 test_log_directory = os.path.join(current_file_directory, "../test_outputs/logs/per-plates")
 
 def perPlatesNonsharing001():
-  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-001.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-001.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesNonsharing002():
-  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-002.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-002.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesNonsharing003():
-  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-003.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-003.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesNonsharing004():
-  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-004.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-004.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesNonsharing005():
-  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-005.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-005.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesNonsharing006():
-  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-006.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-006.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesNonsharing007():
-  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-007.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-007.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesNonsharing008():
-  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-008.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-008.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
 
 def perPlatesNonsharing009():
-  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-009.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-009.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesNonsharing010():
-  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-010.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-010.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesNonsharing011():
-  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-011.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-011.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesNonsharing012():
-  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-012.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-012.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesNonsharing013():
-  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-013.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-013.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesNonsharing014():
-  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-014.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-014.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesNonsharing015():
-  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-015.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-015.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesNonsharing016():
-  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-016.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(non_sharing_xmls_directory, "per-plate-nonsharing-016.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def runAllTests(mode = "ALL"):
@@ -112,13 +112,13 @@ def runAllTests(mode = "ALL"):
       sai_passed_counter+=1
 
   print("\n<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>")
-  print("|| -------- PERPENDICULAR PLATES (SHARING) RESULTS -------- ||")
+  print("|| -------- PERPENDICULAR PLATES (NONSHARING) RESULTS -------- ||")
   print("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>\n")
 
-  print(f"Perpendicular Plates (Sharing) Results (DAI):\t {dai_passed_counter} / 8 PASSED")
-  print(f"Perpendicular Plates (Sharing) Results (SAI):\t {sai_passed_counter} / 8 PASSED")
+  print(f"Perpendicular Plates (Nonsharing) Results (DAI):\t {dai_passed_counter} / 8 PASSED")
+  print(f"Perpendicular Plates (Nonsharing) Results (SAI):\t {sai_passed_counter} / 8 PASSED")
 
-  return dai_passed_counter + sai_passed_counter
+  return dai_passed_counter, sai_passed_counter
 
 if __name__ == "__main__":
   runAllTests()

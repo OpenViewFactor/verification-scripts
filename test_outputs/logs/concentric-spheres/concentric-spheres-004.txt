@@ -35,13 +35,13 @@
  [Skewness]		Min/Max		-0.000000 / 0.041554
  -----------------------------------------------------------------
 [LOG] NO Blocking Meshes Loaded
-[LOG] Meshes loaded in 0.049116 [s]
+[LOG] Meshes loaded in 0.047719 [s]
 [LOG] Problem Size: 419430400 Pairs
 [LOG] Applying Back-Face Cull
-[LOG] Back-Face Cull completed in 1.254076 [s]
+[LOG] Back-Face Cull completed in 1.294132 [s]
 [LOG] Evaluating View Factors
 [LOG] Applying Double Area Integration
-[LOG] View Factors completed in 0.328657 [s]
+[LOG] View Factors completed in 0.332017 [s]
 [LOG] Evaluating Results
 [RESULT] Surface-Surface View Factor: 0.444525
-[LOG] Results evaluated in 1.274386 [s]
+[LOG] Results evaluated in 1.292120 [s]

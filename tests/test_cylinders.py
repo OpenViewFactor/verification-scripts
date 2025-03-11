@@ -10,99 +10,103 @@ xmls_directory = os.path.join(current_file_directory, "../test-xmls/coaxial-cyli
 test_log_directory = os.path.join(current_file_directory, "../test_outputs/logs/coaxial-cylinders")
 
 def cylinders001():
-  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-001.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-001.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def cylinders002():
-  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-002.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-002.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def cylinders003():
-  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-003.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-003.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def cylinders004():
-  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-004.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-004.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def cylinders005():
-  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-005.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-005.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def cylinders006():
-  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-006.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-006.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def cylinders007():
-  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-007.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-007.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
 
 def cylinders008():
-  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-008.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-008.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def cylinders009():
-  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-009.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-009.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def cylinders010():
-  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-010.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-010.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def cylinders011():
-  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-011.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-011.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def cylinders012():
-  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-012.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-012.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def cylinders013():
-  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-013.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-013.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def cylinders014():
-  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-014.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "coaxial-cylinders-014.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
-def runAllTests():
-  passed_counter = 0
-  if cylinders001():
-    passed_counter+=1
-  if cylinders002():
-    passed_counter+=1
-  if cylinders003():
-    passed_counter+=1
-  if cylinders004():
-    passed_counter+=1
-  # if cylinders005():
-  #   passed_counter+=1
-  # if cylinders006():
-  #   passed_counter+=1
-  # if cylinders007():
-  #   passed_counter+=1
-  if cylinders008():
-    passed_counter+=1
-  if cylinders009():
-    passed_counter+=1
-  if cylinders010():
-    passed_counter+=1
-  if cylinders011():
-    passed_counter+=1
-  # if cylinders012():
-  #   passed_counter+=1
-  # if cylinders013():
-  #   passed_counter+=1
-  # if cylinders014():
-  #   passed_counter+=1
+def runAllTests(mode = "ALL"):
+  dai_passed_counter = 0
+  if mode == "ALL" or mode == "DAI":
+    if cylinders001():
+      dai_passed_counter+=1
+    if cylinders002():
+      dai_passed_counter+=1
+    if cylinders003():
+      dai_passed_counter+=1
+    if cylinders004():
+      dai_passed_counter+=1
+    if cylinders005():
+      dai_passed_counter+=1
+    if cylinders006():
+      dai_passed_counter+=1
+    if cylinders007():
+      dai_passed_counter+=1
+  sai_passed_counter = 0
+  if mode == "ALL" or mode == "SAI":
+    if cylinders008():
+      sai_passed_counter+=1
+    if cylinders009():
+      sai_passed_counter+=1
+    if cylinders010():
+      sai_passed_counter+=1
+    if cylinders011():
+      sai_passed_counter+=1
+    if cylinders012():
+      sai_passed_counter+=1
+    if cylinders013():
+      sai_passed_counter+=1
+    if cylinders014():
+      sai_passed_counter+=1
 
   print("\n<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>")
   print("|| ------------- CONCENTRIC CYLINDERS RESULTS ------------- ||")
   print("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>\n")
 
-  print(f"Concentric Cylinders Results:\t {passed_counter} / 14 PASSED")
+  print(f"Concentric Cylinders Results (DAI):\t {dai_passed_counter} / 7 PASSED")
+  print(f"Concentric Cylinders Results (SAI):\t {sai_passed_counter} / 7 PASSED")
 
-  return passed_counter
+  return dai_passed_counter, sai_passed_counter
 
 if __name__ == "__main__":
   runAllTests()

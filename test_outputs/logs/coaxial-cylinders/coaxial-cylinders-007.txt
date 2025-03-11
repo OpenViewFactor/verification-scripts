@@ -1,0 +1,47 @@
+[LOG] Solver Setting Loaded: Back Face Cull Mode -	ON
+[LOG] Solver Setting Loaded: Blocking Mode -		BVH
+[LOG] Solver Setting Loaded: Self-Intersection Mode -	NONE
+[LOG] Solver Setting Loaded: Numeric Method -		DAI
+[LOG] Solver Setting Loaded: Compute Backend -		CPU_N
+[LOG] Solver Setting Loaded: Floating Point Precision -	DOUBLE
+[LOG] NO Blocker BVH Output
+[LOG] NO Plain Text Matrix Output
+[LOG] NO Graphic File Output
+[LOG] Loading Meshes
+[LOG] Loading Emitting Mesh : /home/natan/Development/OpenViewFactor/verification-scripts/tests/../submodules/verification-meshes/coaxial-cylinders/inner-r=10-h=1.stl
+ -----------------------------------------------------------------
+ [Size]					10728 Elements
+ [Aspect Ratio]		Mean		1.232353
+ [Aspect Ratio]		Median		1.000001
+ [Aspect Ratio]		Min / Max	1.000000 / 2.916989
+ [Element Quality]	Mean		0.955027
+ [Element Quality]	Median		1.000000
+ [Element Quality]	Min/Max		0.610798 / 1.000000
+ [Skewness]		Mean		0.053359
+ [Skewness]		Median		0.000000
+ [Skewness]		Min/Max		-0.000000 / 0.457069
+ -----------------------------------------------------------------
+[LOG] Loading Receiving Mesh : /home/natan/Development/OpenViewFactor/verification-scripts/tests/../submodules/verification-meshes/coaxial-cylinders/outer-r=32-h=1.stl
+ -----------------------------------------------------------------
+ [Size]					10660 Elements
+ [Aspect Ratio]		Mean		1.212127
+ [Aspect Ratio]		Median		1.000003
+ [Aspect Ratio]		Min / Max	1.000000 / 2.014208
+ [Element Quality]	Mean		0.955985
+ [Element Quality]	Median		1.000000
+ [Element Quality]	Min/Max		0.781258 / 1.000000
+ [Skewness]		Mean		0.061509
+ [Skewness]		Median		0.000000
+ [Skewness]		Min/Max		-0.000000 / 0.305549
+ -----------------------------------------------------------------
+[LOG] NO Blocking Meshes Loaded
+[LOG] Meshes loaded in 0.024527 [s]
+[LOG] Problem Size: 114360480 Pairs
+[LOG] Applying Back-Face Cull
+[LOG] Back-Face Cull completed in 0.339851 [s]
+[LOG] Evaluating View Factors
+[LOG] Applying Double Area Integration
+[LOG] View Factors completed in 0.226973 [s]
+[LOG] Evaluating Results
+[RESULT] Surface-Surface View Factor: 0.027078
+[LOG] Results evaluated in 0.381309 [s]

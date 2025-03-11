@@ -35,11 +35,11 @@
  [Skewness]		Min/Max		0.000000 / 0.849509
  -----------------------------------------------------------------
 [LOG] NO Blocking Meshes Loaded
-[LOG] Meshes loaded in 0.026735 [s]
+[LOG] Meshes loaded in 0.025305 [s]
 [LOG] Problem Size: 107785924 Pairs
 [LOG] Evaluating View Factors
 [LOG] Applying Double Area Integration
-[LOG] View Factors completed in 0.668831 [s]
+[LOG] View Factors completed in 0.707237 [s]
 [LOG] Evaluating Results
 [RESULT] Surface-Surface View Factor: 0.233516
-[LOG] Results evaluated in 0.530386 [s]
+[LOG] Results evaluated in 0.552234 [s]

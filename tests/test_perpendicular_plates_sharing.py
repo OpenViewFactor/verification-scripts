@@ -10,67 +10,67 @@ sharing_xmls_directory = os.path.join(current_file_directory, '../test-xmls/per-
 test_log_directory = os.path.join(current_file_directory, "../test_outputs/logs/per-plates")
 
 def perPlatesSharing001():
-  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-001.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-001.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesSharing002():
-  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-002.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-002.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesSharing003():
-  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-003.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-003.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesSharing004():
-  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-004.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-004.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesSharing005():
-  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-005.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-005.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesSharing006():
-  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-006.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-006.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesSharing007():
-  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-007.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-007.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesSharing008():
-  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-008.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-008.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesSharing009():
-  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-009.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-009.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesSharing010():
-  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-010.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-010.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesSharing011():
-  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-011.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-011.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesSharing012():
-  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-012.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-012.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesSharing013():
-  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-013.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-013.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesSharing014():
-  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-014.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-014.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesSharing015():
-  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-015.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-015.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def perPlatesSharing016():
-  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-016.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(sharing_xmls_directory, "per-plate-sharing-016.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def runAllTests(mode = "ALL"):
@@ -118,7 +118,7 @@ def runAllTests(mode = "ALL"):
   print(f"Perpendicular Plates (Sharing) Results (DAI):\t {dai_passed_counter} / 8 PASSED")
   print(f"Perpendicular Plates (Sharing) Results (SAI):\t {sai_passed_counter} / 8 PASSED")
 
-  return dai_passed_counter + sai_passed_counter
+  return dai_passed_counter, sai_passed_counter
 
 if __name__ == "__main__":
   runAllTests()

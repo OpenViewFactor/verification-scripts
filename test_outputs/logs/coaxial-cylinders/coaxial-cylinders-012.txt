@@ -1,0 +1,47 @@
+[LOG] Solver Setting Loaded: Back Face Cull Mode -	ON
+[LOG] Solver Setting Loaded: Blocking Mode -		BVH
+[LOG] Solver Setting Loaded: Self-Intersection Mode -	NONE
+[LOG] Solver Setting Loaded: Numeric Method -		SAI
+[LOG] Solver Setting Loaded: Compute Backend -		CPU_N
+[LOG] Solver Setting Loaded: Floating Point Precision -	DOUBLE
+[LOG] NO Blocker BVH Output
+[LOG] NO Plain Text Matrix Output
+[LOG] NO Graphic File Output
+[LOG] Loading Meshes
+[LOG] Loading Emitting Mesh : /home/natan/Development/OpenViewFactor/verification-scripts/tests/../submodules/verification-meshes/coaxial-cylinders/inner-r=1-h=1.stl
+ -----------------------------------------------------------------
+ [Size]					9776 Elements
+ [Aspect Ratio]		Mean		1.033424
+ [Aspect Ratio]		Median		1.000001
+ [Aspect Ratio]		Min / Max	1.000000 / 1.650376
+ [Element Quality]	Mean		0.993284
+ [Element Quality]	Median		1.000000
+ [Element Quality]	Min/Max		0.848462 / 1.000000
+ [Skewness]		Mean		0.010771
+ [Skewness]		Median		0.000000
+ [Skewness]		Min/Max		-0.000000 / 0.245812
+ -----------------------------------------------------------------
+[LOG] Loading Receiving Mesh : /home/natan/Development/OpenViewFactor/verification-scripts/tests/../submodules/verification-meshes/coaxial-cylinders/outer-r=2-h=1.stl
+ -----------------------------------------------------------------
+ [Size]					10108 Elements
+ [Aspect Ratio]		Mean		1.086127
+ [Aspect Ratio]		Median		1.000000
+ [Aspect Ratio]		Min / Max	1.000000 / 2.542211
+ [Element Quality]	Mean		0.982683
+ [Element Quality]	Median		1.000000
+ [Element Quality]	Min/Max		0.676072 / 1.000000
+ [Skewness]		Mean		0.021404
+ [Skewness]		Median		0.000000
+ [Skewness]		Min/Max		-0.000000 / 0.399047
+ -----------------------------------------------------------------
+[LOG] NO Blocking Meshes Loaded
+[LOG] Meshes loaded in 0.021803 [s]
+[LOG] Problem Size: 98815808 Pairs
+[LOG] Applying Back-Face Cull
+[LOG] Back-Face Cull completed in 0.290444 [s]
+[LOG] Evaluating View Factors
+[LOG] Applying Single Area Integration
+[LOG] View Factors completed in 0.316283 [s]
+[LOG] Evaluating Results
+[RESULT] Surface-Surface View Factor: 0.464560
+[LOG] Results evaluated in 0.326296 [s]

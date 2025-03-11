@@ -7,7 +7,7 @@ sys.path.append(os.path.join(current_file_directory, 'submodules/pyOpenViewFacto
 import RunOVF
 import parseXML
 
-def runTest(xml_filepath, meshes_directory, test_log_directory):
+def runTest(xml_filepath, test_log_directory, all_mesh_dir = None, emit_mesh_dir = None, rec_mesh_dir = None, blocking_mesh_dir = None):
   xml_specifications = parseXML.parseXML(xml_filepath)
 
   print("\n<><><><><><><><><><><><><><><><><><><><>")
@@ -17,15 +17,20 @@ def runTest(xml_filepath, meshes_directory, test_log_directory):
   xml_filepath_without_extension = xml_filepath.split(".")[-2]
   xml_filename_without_path = xml_filepath_without_extension.split("/")[-1]
   log_filepath = os.path.join(test_log_directory, xml_filename_without_path)
+
+  if not all_mesh_dir == None:
+    emit_mesh_dir = all_mesh_dir
+    rec_mesh_dir = all_mesh_dir
+    blocking_mesh_dir = all_mesh_dir
   
   if xml_specifications["filepaths"]["blockers"][0] == "NONE":
     obstructions = None
   else:
-    obstructions = [ os.path.join(meshes_directory, blocker) for blocker in xml_specifications["filepaths"]["blockers"] ]
+    obstructions = [ os.path.join(blocking_mesh_dir, blocker) for blocker in xml_specifications["filepaths"]["blockers"] ]
 
   RunOVF.RunOVF(
     OVF_EXE_PATH = os.path.join(os.getenv("MY_BINARY_DIR"),"ovf"),
-    inputs = [ os.path.join(meshes_directory, xml_specifications["filepaths"]["emitter"]), os.path.join(meshes_directory, xml_specifications["filepaths"]["receiver"]) ],
+    inputs = [ os.path.join(emit_mesh_dir, xml_specifications["filepaths"]["emitter"]), os.path.join(rec_mesh_dir, xml_specifications["filepaths"]["receiver"]) ],
     obstructions = obstructions,
     selfint = xml_specifications["solver settings"]["self-int"],
     numerics = xml_specifications["solver settings"]["numerics"],
@@ -49,7 +54,10 @@ def runTest(xml_filepath, meshes_directory, test_log_directory):
   tolerance = xml_specifications["test data"]["tolerance"]
   absolute_error = abs(result - analytic_result)
   print(f"Absolute Error:\t\t\t {absolute_error:E}")
-  normalized_absolute_error = absolute_error / analytic_result
+  if absolute_error == 0:
+    normalized_absolute_error = 0
+  else:
+    normalized_absolute_error = absolute_error / ((analytic_result + result)/2)
   print(f"Normalized Absolute Error:\t {normalized_absolute_error:E}")
   passed = normalized_absolute_error < tolerance
   test_result = "PASSED" if passed else "FAILED"

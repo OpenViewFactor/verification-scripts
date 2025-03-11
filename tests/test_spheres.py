@@ -10,51 +10,51 @@ xmls_directory = os.path.join(current_file_directory, "../test-xmls/concentric-s
 test_log_directory = os.path.join(current_file_directory, "../test_outputs/logs/concentric-spheres")
 
 def spheres001():
-  passed = runTest.runTest(os.path.join(xmls_directory, "concentric-spheres-001.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "concentric-spheres-001.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
 
 def spheres002():
-  passed = runTest.runTest(os.path.join(xmls_directory, "concentric-spheres-002.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "concentric-spheres-002.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
 
 def spheres003():
-  passed = runTest.runTest(os.path.join(xmls_directory, "concentric-spheres-003.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "concentric-spheres-003.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def spheres004():
-  passed = runTest.runTest(os.path.join(xmls_directory, "concentric-spheres-004.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "concentric-spheres-004.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def spheres005():
-  passed = runTest.runTest(os.path.join(xmls_directory, "concentric-spheres-005.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "concentric-spheres-005.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def spheres006():
-  passed = runTest.runTest(os.path.join(xmls_directory, "concentric-spheres-006.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "concentric-spheres-006.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def spheres007():
-  passed = runTest.runTest(os.path.join(xmls_directory, "concentric-spheres-007.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "concentric-spheres-007.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def spheres008():
-  passed = runTest.runTest(os.path.join(xmls_directory, "concentric-spheres-008.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "concentric-spheres-008.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
 
 def spheres009():
-  passed = runTest.runTest(os.path.join(xmls_directory, "concentric-spheres-009.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "concentric-spheres-009.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
 
 def spheres010():
-  passed = runTest.runTest(os.path.join(xmls_directory, "concentric-spheres-010.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "concentric-spheres-010.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
 
 def spheres011():
-  passed = runTest.runTest(os.path.join(xmls_directory, "concentric-spheres-011.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "concentric-spheres-011.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def spheres012():
-  passed = runTest.runTest(os.path.join(xmls_directory, "concentric-spheres-012.xml"), meshes_directory, test_log_directory)
+  passed = runTest.runTest(os.path.join(xmls_directory, "concentric-spheres-012.xml"), test_log_directory = test_log_directory, all_mesh_dir=meshes_directory)
   return passed
   
 def runAllTests(mode = "ALL"):
@@ -94,6 +94,6 @@ def runAllTests(mode = "ALL"):
   print(f"Concentric Spheres Results (DAI):\t {dai_passed_counter} / 6 PASSED")
   print(f"Concentric Spheres Results (SAI):\t {sai_passed_counter} / 6 PASSED")
 
-  return dai_passed_counter + sai_passed_counter
+  return dai_passed_counter, sai_passed_counter
 if __name__ == "__main__":
   runAllTests()
