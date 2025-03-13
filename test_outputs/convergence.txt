@@ -1,0 +1,163 @@
+-- PARALLEL PLATES (1x1)
+
+dai_numeric = [0.20212363219738, 0.200159756748512, 0.199902200140395, 0.199843957245614, 0.199827926107253, 0.199826077606153];
+sai_numeric = [0.200966328733284, 0.199992157681007, 0.199863539076901, 0.199834425937343, 0.199826410889331, 0.199825486650218];
+analytic = 0.199824895698387;
+N = [1156, 48841, 848241, 13557124, 529046001, 3462145600];
+N_p = [34, 221, 921, 3682, 23001, 58777];
+dai_errors = abs(dai_numeric - analytic);
+sai_errors = abs(sai_numeric - analytic);
+loglog(N_p, dai_errors * 100, "o:k", "MarkerSize", 10, "LineWidth", 3)
+hold on
+loglog(N_p, sai_errors * 100, "s--k", "MarkerSize", 10, "MarkerFaceColor", "k", "LineWidth", 3)
+grid on
+xlabel("Tessellations per surface")
+ylabel("Percent Error")
+legend("DAI","SAI")
+xlim([1e1,1e6])
+ylim([1e-5,1e0])
+set(gca, "FontSize", 14)
+hold off
+
+
+
+-- PERPENDICULAR PLATES (SHARING) (1x1)
+
+dai_numeric = [0.211632649515177, 0.202380482650054, 0.201188740868883, 0.20061638550097, 0.200262786840401, 0.200375538830306]; % I DON'T KNOW WHY THIS LAST RESULT IS SO MUCH WORSE
+sai_numeric = [0.200149624038132, 0.200021419384941, 0.200037976684927, 0.200041533922356, 0.200043649525026, 0.200043426686355]; % I DON'T KNOW WHY THIS LAST RESULT IS SO MUCH WORSE
+analytic = 0.200043776075403;
+N = [1156, 48841, 848241, 13557124, 529046001, 3454735729];
+N_p = [34, 221, 921, 3682, 23001, 58777];
+dai_errors = abs(dai_numeric - analytic);
+sai_errors = abs(sai_numeric - analytic);
+loglog(N_p, dai_errors * 100, "o:k", "MarkerSize", 10, "LineWidth", 3)
+hold on
+loglog(N_p, sai_errors * 100, "s--k", "MarkerSize", 10, "MarkerFaceColor", "k", "LineWidth", 3)
+grid on
+xlabel("Tessellations per surface")
+ylabel("Percent Error")
+legend("DAI","SAI")
+xlim([1e1,1e6])
+ylim([1e-5,1e0])
+set(gca, "FontSize", 14)
+hold off
+
+
+
+-- PERPENDICULAR PLATES (NONSHARING) (1x1 o 0.1)
+
+dai_numeric = [0.157706823874397, 0.15479907479484, 0.154353038778517, 0.154244229169982, 0.154212915088377, 0.15420931251383];
+sai_numeric = [0.155706711004898, 0.154467225181253, 0.154275611934338, 0.154225079205695, 0.154209871844406, 0.154208127372573];
+analytic = 0.154206868494109;
+N = [1156, 48841, 848241, 13557124, 529046001, 3454735729];
+N_p = [34, 221, 921, 3682, 23001, 58777];
+dai_errors = abs(dai_numeric - analytic);
+sai_errors = abs(sai_numeric - analytic);
+loglog(N_p, dai_errors * 100, "o:k", "MarkerSize", 10, "LineWidth", 3)
+hold on
+loglog(N_p, sai_errors * 100, "s--k", "MarkerSize", 10, "MarkerFaceColor", "k", "LineWidth", 3)
+grid on
+xlabel("Tessellations per surface")
+ylabel("Percent Error")
+legend("DAI","SAI")
+xlim([1e1,1e6])
+ylim([1e-5,1e0])
+set(gca, "FontSize", 14)
+hold off
+
+
+
+-- PARALLEL DISCS (r=1)
+
+dai_numeric = [ 0.382117982635409, 0.381309922363306, 0.381959483020725, 0.381925787959885, 0.381963830337079, 0.381964944808842 ];
+sai_numeric = [ 0.376121107621998, 0.38054762080434, 0.381795640715257, 0.381886716661892, 0.381957769357435, 0.381962598085556 ];
+analytic = 0.381966011250105;
+N = [ 400, 22801, 442225, 7817616, 317801929, 2114344324 ];
+N_p = [ 20, 151, 665, 2796, 17827, 45982 ];
+dai_errors = abs(dai_numeric - analytic);
+sai_errors = abs(sai_numeric - analytic);
+loglog(N_p, dai_errors * 100, "o:k", "MarkerSize", 10, "LineWidth", 3)
+hold on
+loglog(N_p, sai_errors * 100, "s--k", "MarkerSize", 10, "MarkerFaceColor", "k", "LineWidth", 3)
+grid on
+xlabel("Tessellations per surface")
+ylabel("Percent Error")
+legend("DAI","SAI")
+xlim([1e1,1e6])
+ylim([1e-5,1e0])
+set(gca, "FontSize", 14)
+hold off
+
+
+
+
+-- CYLINDERS (r=0.125 -> r=0.25) [i'm skipping L1 because that mesh is literally just rectangles...]
+
+dai_numeric = [ 0.923696187163399, 0.913727330128016, 0.911633599457756, 0.910986384977054, 0.910690704047496 ]; % I DON'T KNOW WHY THIS LAST RESULT IS SO MUCH WORSE
+sai_numeric = [ 0.908146823384595, 0.910041635593742, 0.910657526042365, 0.91083609264258, 0.910631606609936 ]; % I DON'T KNOW WHY THIS LAST RESULT IS SO MUCH WORSE
+analytic = 0.910868433007748;
+N = [ 96768, 1267200, 18714080, 772395008, 618200096 ];
+N_pi = [ 336, 1100, 4312, 27776, 70132 ];
+N_po = [ 288, 1152, 4340, 27808, 70056 ];
+dai_errors = abs(dai_numeric - analytic);
+sai_errors = abs(sai_numeric - analytic);
+loglog(N_pi, dai_errors * 100, "o:k", "MarkerSize", 10, "LineWidth", 3)
+hold on
+loglog(N_pi, sai_errors * 100, "s--k", "MarkerSize", 10, "MarkerFaceColor", "k", "LineWidth", 3)
+grid on
+xlabel("Tessellations per surface")
+ylabel("Percent Error")
+legend("DAI","SAI")
+xlim([1e1,1e6])
+ylim([1e-3,2])
+set(gca, "FontSize", 14)
+hold off
+
+
+
+
+-- SPHERES (r=1 -> r=3)
+
+dai_numeric = [ 1.04425369223099, 1.01149067960918, 1.00295624723579, 1.00072692303148, 1.00018216953377, 1.00004757432872 ];
+sai_numeric = [ 0.981121317744366, 0.995822164169393, 0.999106979107552, 0.999764755406502, 0.99994167603952, 0.999987466395445 ];
+analytic = 1;
+N = [ 6400, 102400, 1638400, 26214400, 419430400, 2415919104 ];
+N_p = [ 80, 320, 1280, 5120, 20480, 81920 ];
+dai_errors = abs(dai_numeric - analytic);
+sai_errors = abs(sai_numeric - analytic);
+loglog(N_p, dai_errors * 100, "o:k", "MarkerSize", 10, "LineWidth", 3)
+hold on
+loglog(N_p, sai_errors * 100, "s--k", "MarkerSize", 10, "MarkerFaceColor", "k", "LineWidth", 3)
+grid on
+xlabel("Tessellations per surface")
+ylabel("Percent Error")
+legend("DAI","SAI")
+xlim([1e1,1e6])
+ylim([1e-3,6])
+set(gca, "FontSize", 14)
+hold off
+
+
+
+
+-- BLOCKING (cyl r=0.125 -> sph r=3 w/ cyl r=0.25 block) [i'm skipping L1 because cylinders are literal rectangles]
+
+dai_numeric = [ 0.086469382218908, 0.0872539196171505, 0.0883023895361547,  ];
+sai_numeric = [  ];
+analytic = 0.089131566992252;
+N = [ 107520, 1408000, 22077440, 568852480 ];
+N_pi = [ 336, 1100, 4132, 27776, ];
+N_po = [ 320, 1280, 5120, 20480,  ];
+dai_errors = abs(dai_numeric - analytic);
+sai_errors = abs(sai_numeric - analytic);
+loglog(N_p, dai_errors * 100, "o:k", "MarkerSize", 10, "LineWidth", 3)
+hold on
+loglog(N_p, sai_errors * 100, "s--k", "MarkerSize", 10, "MarkerFaceColor", "k", "LineWidth", 3)
+grid on
+xlabel("Tessellations per surface")
+ylabel("Percent Error")
+legend("DAI","SAI")
+xlim([1e1,1e6])
+ylim([1e-3,6])
+set(gca, "FontSize", 14)
+hold off
