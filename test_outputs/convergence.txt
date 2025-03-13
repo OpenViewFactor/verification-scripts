@@ -20,16 +20,16 @@ sai_runtime = sai_vf_time;
 
 
 figure(1)
-loglog(N, dai_errors * 100, "o:k", "MarkerSize", 10, "LineWidth", 3)
+loglog(N, dai_errors, "o:k", "MarkerSize", 10, "LineWidth", 3)
 hold on
-loglog(N, sai_errors * 100, "s--k", "MarkerSize", 10, "MarkerFaceColor", "k", "LineWidth", 3)
+loglog(N, sai_errors, "s--k", "MarkerSize", 10, "MarkerFaceColor", "k", "LineWidth", 3)
 grid on
 xlabel("Number of Element Pairs")
 ylabel("Absolute Error")
 legend("DAI","SAI")
 xlim([1e2,1e10])
 xticks([1e2,1e4,1e6,1e8,1e10])
-ylim([1e-6,1e0])
+ylim([1e-7,1e-2])
 set(gca, "FontSize", 18)
 set(gcf,'PaperUnits','centimeters')
 set(gcf,'PaperSize',[10 10])
@@ -79,16 +79,16 @@ sai_runtime = sai_vf_time;
 
 
 figure(1)
-loglog(N, dai_errors * 100, "o:k", "MarkerSize", 10, "LineWidth", 3)
+loglog(N, dai_errors, "o:k", "MarkerSize", 10, "LineWidth", 3)
 hold on
-loglog(N, sai_errors * 100, "s--k", "MarkerSize", 10, "MarkerFaceColor", "k", "LineWidth", 3)
+loglog(N, sai_errors, "s--k", "MarkerSize", 10, "MarkerFaceColor", "k", "LineWidth", 3)
 grid on
 xlabel("Number of Element Pairs")
 ylabel("Absolute Error")
 legend("DAI","SAI")
 xlim([1e2,1e10])
 xticks([1e2,1e4,1e6,1e8,1e10])
-ylim([1e-6,1e1])
+ylim([1e-7,1e-1])
 set(gca, "FontSize", 18)
 set(gcf,'PaperUnits','centimeters')
 set(gcf,'PaperSize',[10 10])
@@ -139,16 +139,16 @@ sai_runtime = sai_vf_time;
 
 
 figure(1)
-loglog(N, dai_errors * 100, "o:k", "MarkerSize", 10, "LineWidth", 3)
+loglog(N, dai_errors, "o:k", "MarkerSize", 10, "LineWidth", 3)
 hold on
-loglog(N, sai_errors * 100, "s--k", "MarkerSize", 10, "MarkerFaceColor", "k", "LineWidth", 3)
+loglog(N, sai_errors, "s--k", "MarkerSize", 10, "MarkerFaceColor", "k", "LineWidth", 3)
 grid on
 xlabel("Number of Element Pairs")
 ylabel("Absolute Error")
 legend("DAI","SAI")
 xlim([1e2,1e10])
 xticks([1e2,1e4,1e6,1e8,1e10])
-ylim([1e-4,1e0])
+ylim([1e-6,1e-2])
 set(gca, "FontSize", 18)
 set(gcf,'PaperUnits','centimeters')
 set(gcf,'PaperSize',[10 10])
@@ -201,16 +201,16 @@ sai_runtime = sai_vf_time;
 
 
 figure(1)
-loglog(N, dai_errors * 100, "o:k", "MarkerSize", 10, "LineWidth", 3)
+loglog(N, dai_errors, "o:k", "MarkerSize", 10, "LineWidth", 3)
 hold on
-loglog(N, sai_errors * 100, "s--k", "MarkerSize", 10, "MarkerFaceColor", "k", "LineWidth", 3)
+loglog(N, sai_errors, "s--k", "MarkerSize", 10, "MarkerFaceColor", "k", "LineWidth", 3)
 grid on
 xlabel("Number of Element Pairs")
 ylabel("Absolute Error")
 legend("DAI","SAI")
 xlim([1e2,1e10])
 xticks([1e2,1e4,1e6,1e8,1e10])
-ylim([1e-6,1e0])
+ylim([1e-6,1e-2])
 set(gca, "FontSize", 18)
 set(gcf,'PaperUnits','centimeters')
 set(gcf,'PaperSize',[10 10])
@@ -262,16 +262,17 @@ sai_errors = abs(sai_numeric - analytic);
 
 
 figure(1)
-loglog(N, dai_errors * 100, "o:k", "MarkerSize", 10, "LineWidth", 3)
+loglog(N, dai_errors, "o:k", "MarkerSize", 10, "LineWidth", 3)
 hold on
-loglog(N, sai_errors * 100, "s--k", "MarkerSize", 10, "MarkerFaceColor", "k", "LineWidth", 3)
+loglog(N, sai_errors, "s--k", "MarkerSize", 10, "MarkerFaceColor", "k", "LineWidth", 3)
 grid on
 xlabel("Number of Element Pairs")
 ylabel("Absolute Error")
 legend("DAI","SAI")
 xlim([1e5,1e10])
-ylim([1e-3,1e0])
 xticks([1e5,1e6,1e7,1e8,1e9,1e10])
+ylim([1e-5,1e-2])
+yticks([1e-5,1e-4,1e-3,1e-2])
 set(gca, "FontSize", 18)
 set(gcf,'PaperUnits','centimeters')
 set(gcf,'PaperSize',[10 10])
@@ -320,16 +321,17 @@ dai_errors = abs(dai_numeric - analytic);
 sai_errors = abs(sai_numeric - analytic);
 
 figure(1)
-loglog(N, dai_errors * 100, "o:k", "MarkerSize", 10, "LineWidth", 3)
+loglog(N, dai_errors, "o:k", "MarkerSize", 10, "LineWidth", 3)
 hold on
-loglog(N, sai_errors * 100, "s--k", "MarkerSize", 10, "MarkerFaceColor", "k", "LineWidth", 3)
+loglog(N, sai_errors, "s--k", "MarkerSize", 10, "MarkerFaceColor", "k", "LineWidth", 3)
 grid on
 xlabel("Number of Element Pairs")
 ylabel("Absolute Error")
 legend("DAI","SAI")
 xlim([1e3,1e10])
 xticks([1e3,1e4,1e5,1e6,1e7,1e8,1e9,1e10])
-ylim([1e-3,1e1])
+ylim([1e-5,1e-1])
+yticks([1e-5,1e-4,1e-3,1e-2,1e-1])
 set(gca, "FontSize", 18)
 set(gcf,'PaperUnits','centimeters')
 set(gcf,'PaperSize',[10 10])
@@ -389,15 +391,15 @@ N_p1 = [ 80, 320, 1280, 5120, 20480  ];
 N_p2 = [ 640, 1960, 4928, 11088, 31808 ];
 
 figure(1)
-loglog(N, dai_errors * 100, "o:k", "MarkerSize", 10, "LineWidth", 3)
+loglog(N, dai_errors, "o:k", "MarkerSize", 10, "LineWidth", 3)
 hold on
-loglog(N, sai_errors * 100, "s--k", "MarkerSize", 10, "MarkerFaceColor", "k", "LineWidth", 3)
+loglog(N, sai_errors, "s--k", "MarkerSize", 10, "MarkerFaceColor", "k", "LineWidth", 3)
 grid on
 xlabel("Number of Element Pairs")
 ylabel("Absolute Error")
 legend("DAI","SAI")
 xlim([1e4,1e7])
-ylim([1e-4,1e-1])
+ylim([1e-6,1e-3])
 set(gca, "FontSize", 18)
 set(gcf,'PaperUnits','centimeters')
 set(gcf,'PaperSize',[10 10])
