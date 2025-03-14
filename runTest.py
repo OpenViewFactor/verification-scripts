@@ -62,12 +62,7 @@ def runTest(xml_filepath, test_log_directory, all_mesh_dir = None, emit_mesh_dir
   tolerance = xml_specifications["test data"]["tolerance"]
   absolute_error = abs(result - analytic_result)
   print(f"Absolute Error:\t\t\t {absolute_error:E}")
-  if absolute_error == 0:
-    normalized_absolute_error = 0
-  else:
-    normalized_absolute_error = absolute_error / analytic_result
-  print(f"Normalized Absolute Error:\t {normalized_absolute_error:E}")
-  passed = normalized_absolute_error < tolerance
+  passed = absolute_error < tolerance
   test_result = "PASSED" if passed else "FAILED"
   print(f"Test Result:\t\t\t {test_result}")
 
