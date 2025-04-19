@@ -46,12 +46,12 @@ set(gca,"XTickLabelRotation",0)
 ylim([1e-6,1e-3])
 yticks([1e-6,1e-5,1e-4,1e-3])
 set(gca, "FontSize", 18)
-set(gcf,'Units','centimeters')
-set(gcf,'PaperUnits','centimeters')
-set(gcf,'PaperSize',[1.1*paper_size, paper_size])
+set(figure(1),'Units','centimeters')
+set(figure(1),'PaperUnits','centimeters')
+set(figure(1),'PaperSize',[1.1*paper_size, paper_size])
 full_file_name = output_path + "bvh-l3-blocking-r=3-r=0.125-r=0.25-convergence.pdf";
-pause(0.5)
-exportgraphics(gcf, full_file_name)
+pause(1.5)
+exportgraphics(figure(1), full_file_name)
 hold off
 
 
@@ -70,12 +70,12 @@ set(gca,"XTickLabelRotation",0)
 ylim([1e-1,1e2])
 yticks([1e-1,1e0,1e1,1e2])
 set(gca, "FontSize", 18)
-set(gcf,'Units','centimeters')
-set(gcf,'PaperUnits','centimeters')
-set(gcf,'PaperSize',[1.1*paper_size, paper_size])
+set(figure(2),'Units','centimeters')
+set(figure(2),'PaperUnits','centimeters')
+set(figure(2),'PaperSize',[1.1*paper_size, paper_size])
 full_file_name = output_path + "bvh-l3-blocking-r=3-r=0.125-r=0.25-runtime.pdf";
-pause(0.5)
-exportgraphics(gcf, full_file_name)
+pause(1.5)
+exportgraphics(figure(2), full_file_name)
 hold off
 
 
@@ -122,12 +122,12 @@ set(gca,"XTickLabelRotation",0)
 ylim([1e-6,1e-3])
 yticks([1e-6,1e-5,1e-4,1e-3])
 set(gca, "FontSize", 18)
-set(gcf,'Units','centimeters')
-set(gcf,'PaperUnits','centimeters')
-set(gcf,'PaperSize',[1.1*paper_size, paper_size])
+set(figure(3),'Units','centimeters')
+set(figure(3),'PaperUnits','centimeters')
+set(figure(3),'PaperSize',[1.1*paper_size, paper_size])
 full_file_name = output_path + "naive-l6-blocking-r=3-r=0.125-r=0.25-convergence.pdf";
-pause(0.5)
-exportgraphics(gcf, full_file_name)
+pause(1.5)
+exportgraphics(figure(3), full_file_name)
 hold off
 
 figure(4)
@@ -144,12 +144,12 @@ set(gca,"XTickLabelRotation",0)
 ylim([1e-1,1e3])
 yticks([1e-1,1e0,1e1,1e2,1e3])
 set(gca, "FontSize", 18)
-set(gcf,'Units','centimeters')
-set(gcf,'PaperUnits','centimeters')
-set(gcf,'PaperSize',[1.1*paper_size, paper_size])
+set(figure(4),'Units','centimeters')
+set(figure(4),'PaperUnits','centimeters')
+set(figure(4),'PaperSize',[1.1*paper_size, paper_size])
 full_file_name = output_path + "naive-l6-blocking-r=3-r=0.125-r=0.25-runtime.pdf";
-pause(0.5)
-exportgraphics(gcf, full_file_name)
+pause(1.5)
+exportgraphics(figure(4), full_file_name)
 hold off
 
 
@@ -176,10 +176,10 @@ set(gca,"XTickLabelRotation",0)
 ylim([1e-2,1e2])
 yticks([1e-2,1e-1,1e0,1e1,1e2])
 set(gca, "FontSize", 18)
-set(gcf,'Units','centimeters')
-set(gcf,'PaperUnits','centimeters')
-set(gcf,'PaperSize',[1.1*paper_size, paper_size])
+set(figure(5),'Units','centimeters')
+set(figure(5),'PaperUnits','centimeters')
+set(figure(5),'PaperSize',[1.1*paper_size, paper_size])
 full_file_name = output_path + "l3-blocking-r=3-r=0.125-r=0.25-runtime-comparison.pdf";
-pause(0.5)
-exportgraphics(gcf, full_file_name)
+pause(1.5)
+exportgraphics(figure(5), full_file_name)
 hold off

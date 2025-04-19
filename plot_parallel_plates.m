@@ -51,12 +51,12 @@ set(gca,"XTickLabelRotation",0)
 ylim([1e-7,1e-2])
 yticks([1e-7,1e-6,1e-5,1e-4,1e-3,1e-2])
 set(gca, "FontSize", 18)
-set(gcf,'Units','centimeters')
-set(gcf,'PaperUnits','centimeters')
-set(gcf,'PaperSize',[1.1*paper_size, paper_size])
+set(figure(1),'Units','centimeters')
+set(figure(1),'PaperUnits','centimeters')
+set(figure(1),'PaperSize',[1.1*paper_size, paper_size])
 full_file_name = output_path + "par-plates-1x1-e-only-convergence.pdf";
-pause(0.5)
-exportgraphics(gcf, full_file_name)
+pause(1.5)
+exportgraphics(figure(1), full_file_name)
 hold off
 
 
@@ -99,12 +99,12 @@ set(gca,"XTickLabelRotation",0)
 ylim([1e-7,1e-2])
 yticks([1e-7,1e-6,1e-5,1e-4,1e-3,1e-2])
 set(gca, "FontSize", 18)
-set(gcf,'Units','centimeters')
-set(gcf,'PaperUnits','centimeters')
-set(gcf,'PaperSize',[1.1*paper_size, paper_size])
+set(figure(2),'Units','centimeters')
+set(figure(2),'PaperUnits','centimeters')
+set(figure(2),'PaperSize',[1.1*paper_size, paper_size])
 full_file_name = output_path + "par-plates-1x1-convergence.pdf";
-pause(0.5)
-exportgraphics(gcf, full_file_name)
+pause(1.5)
+exportgraphics(figure(2), full_file_name)
 hold off
 
 
@@ -123,10 +123,10 @@ ylim([1e-7,1e-2])
 ylim([1e-3,1e2])
 yticks([1e-3,1e-2,1e-1,1e0,1e1,1e2])
 set(gca, "FontSize", 18)
-set(gcf,'Units','centimeters')
-set(gcf,'PaperUnits','centimeters')
-set(gcf,'PaperSize',[1.1*paper_size, paper_size])
+set(figure(3),'Units','centimeters')
+set(figure(3),'PaperUnits','centimeters')
+set(figure(3),'PaperSize',[1.1*paper_size, paper_size])
 full_file_name = output_path + "par-plates-1x1-runtime.pdf";
-pause(0.5)
-exportgraphics(gcf, full_file_name)
+pause(1.5)
+exportgraphics(figure(3), full_file_name)
 hold off
