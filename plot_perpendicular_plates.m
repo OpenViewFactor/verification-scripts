@@ -1,5 +1,5 @@
 clear all
-close all
+% close all
 clc
 
 set(groot, "defaultAxesTickLabelInterpreter", "latex")
@@ -8,66 +8,6 @@ set(groot, "defaultLegendInterpreter","latex")
 
 output_path = "test_outputs/pdfs/";
 paper_size = 12;
-
-%! -- EMITTER REFINEMENT PERPENDICULAR PLATES SHARING (1x1)
-%TODO REPLACE THIS WITH NEW RECTANGLE GENERATION
-
-dai_numeric = [ 0.222544395891801, 0.200980454137288, 0.200017590237259, 0.199885937494406, 0.199861332130599 ];
-sai_numeric = [ 0.19984147018417, 0.200032387226767, 0.200041845759303, 0.200043283918191, 0.200043555887817 ];
-
-analytic = 0.200043776075403;
-
-N = [ 2500, 44100, 260100, 1020100, 2280100 ];
-
-dai_errors = abs(dai_numeric - analytic);
-sai_errors = abs(sai_numeric - analytic);
-
-
-figure(1)
-loglog(N, dai_errors, "o:k", "MarkerSize", 10, "LineWidth", 3)
-hold on
-loglog(N, sai_errors, "s--k", "MarkerSize", 10, "MarkerFaceColor", "k", "LineWidth", 3)
-
-
-dai_numeric = [ 0.222544395891801 , 0.205467402592189 , 0.202282025842643 , 0.201174854595616 , 0.200800522530535 ];
-sai_numeric = [ 0.19984147018417 , 0.200032387226767 , 0.200041845759303 , 0.200043283918191 , 0.200043555887817 ];
-
-analytic = 0.200043776075403;
-
-N = [ 2500 , 777924 , 27060804 , 416241604 , 2079542404 ];
-
-dai_errors = abs(dai_numeric - analytic);
-sai_errors = abs(sai_numeric - analytic);
-
-loglog(N, dai_errors, ":", "Color",[0,0,0,0.3], "MarkerSize", 10, "LineWidth", 3)
-loglog(N, sai_errors, "--", "Color",[0,0,0,0.3], "MarkerFaceColor", "k", "MarkerSize", 10, "LineWidth", 3)
-hold off
-grid on
-xlabel("Number of Element Pairs")
-ylabel("Absolute Error")
-legend("DAI - single refined","SAI - single refined", "DAI - both refined", "SAI - both refined")
-xlim([1e2,1e10])
-xticks([1e2,1e3,1e4,1e5,1e6,1e7,1e8,1e9,1e10])
-set(gca,"XTickLabelRotation",0)
-ylim([1e-8,1e-1])
-yticks([1e-8,1e-7,1e-6,1e-5,1e-4,1e-3,1e-2,1e-1])
-set(gca, "FontSize", 18)
-set(figure(1),'Units','centimeters')
-set(figure(1),'PaperUnits','centimeters')
-set(figure(1),'PaperSize',[1.1*paper_size, paper_size])
-full_file_name = output_path + "TEMPORARY-sharing-perp-plates-1x1-e-only-convergence.pdf";
-pause(1.5)
-exportgraphics(figure(1), full_file_name)
-hold off
-
-
-
-
-
-
-
-
-
 
 %! -- PERPENDICULAR PLATES (SHARING) (1x1)
 %!  DISTMESH GENERATION
@@ -203,6 +143,59 @@ pause(1.5)
 exportgraphics(figure(5), full_file_name)
 hold off
 
+
+
+
+%! -- EMITTER REFINEMENT PERPENDICULAR PLATES SHARING (1x1)
+%TODO REPLACE THIS WITH NEW RECTANGLE GENERATION
+
+dai_numeric = [ 0.222544395891801, 0.200980454137288, 0.200017590237259, 0.199885937494406, 0.199861332130599 ];
+sai_numeric = [ 0.19984147018417, 0.200032387226767, 0.200041845759303, 0.200043283918191, 0.200043555887817 ];
+
+analytic = 0.200043776075403;
+
+N = [ 2500, 44100, 260100, 1020100, 2280100 ];
+
+dai_errors = abs(dai_numeric - analytic);
+sai_errors = abs(sai_numeric - analytic);
+
+
+figure(1)
+loglog(N, dai_errors, "o:k", "MarkerSize", 10, "LineWidth", 3)
+hold on
+loglog(N, sai_errors, "s--k", "MarkerSize", 10, "MarkerFaceColor", "k", "LineWidth", 3)
+
+
+dai_numeric = [ 0.222544395891801 , 0.205467402592189 , 0.202282025842643 , 0.201174854595616 , 0.200800522530535 ];
+sai_numeric = [ 0.19984147018417 , 0.200032387226767 , 0.200041845759303 , 0.200043283918191 , 0.200043555887817 ];
+
+analytic = 0.200043776075403;
+
+N = [ 2500 , 777924 , 27060804 , 416241604 , 2079542404 ];
+
+dai_errors = abs(dai_numeric - analytic);
+sai_errors = abs(sai_numeric - analytic);
+
+loglog(N, dai_errors, ":", "Color",[0,0,0,0.3], "MarkerSize", 10, "LineWidth", 3)
+loglog(N, sai_errors, "--", "Color",[0,0,0,0.3], "MarkerFaceColor", "k", "MarkerSize", 10, "LineWidth", 3)
+hold off
+grid on
+xlabel("Number of Element Pairs")
+ylabel("Absolute Error")
+legend("DAI - single refined","SAI - single refined", "DAI - both refined", "SAI - both refined")
+xlim([1e3,1e10])
+xticks([1e3,1e4,1e5,1e6,1e7,1e8,1e9,1e10])
+set(gca,"XTickLabelRotation",0)
+ylim([1e-8,1e-1])
+yticks([1e-8,1e-7,1e-6,1e-5,1e-4,1e-3,1e-2,1e-1])
+set(gca, "FontSize", 18)
+set(figure(1),'Units','centimeters')
+set(figure(1),'PaperUnits','centimeters')
+set(figure(1),'PaperSize',[1.1*paper_size, paper_size])
+full_file_name = output_path + "sharing-perp-plates-1x1-e-only-convergence.pdf";
+pause(1.5)
+exportgraphics(figure(1), full_file_name)
+hold off
 
 
 
